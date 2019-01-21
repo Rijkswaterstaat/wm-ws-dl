@@ -1,0 +1,2171 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Webservices</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;json&quot;,&quot;shell&quot;,&quot;python&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="json">JSON Request</a>
+              <a href="#" data-language-name="shell">JSON Response</a>
+              <a href="#" data-language-name="python">Python</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#applications" class="toc-h2 toc-link" data-title="Applications">Applications</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#tutorial-locations" class="toc-h1 toc-link" data-title="Tutorial Locations">Tutorial Locations</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#import" class="toc-h2 toc-link" data-title="Import">Import</a>
+                  </li>
+                  <li>
+                    <a href="#webservices" class="toc-h2 toc-link" data-title="Webservices">Webservices</a>
+                  </li>
+                  <li>
+                    <a href="#request-ophalencatalogus" class="toc-h2 toc-link" data-title="Request OphalenCatalogus">Request OphalenCatalogus</a>
+                  </li>
+                  <li>
+                    <a href="#start-end-date" class="toc-h2 toc-link" data-title="Start/End date">Start/End date</a>
+                  </li>
+                  <li>
+                    <a href="#transform-json-response" class="toc-h2 toc-link" data-title="Transform JSON response">Transform JSON response</a>
+                  </li>
+                  <li>
+                    <a href="#check-information" class="toc-h2 toc-link" data-title="Check information">Check information</a>
+                  </li>
+                  <li>
+                    <a href="#response-to-dataframe" class="toc-h2 toc-link" data-title="Response to dataframe">Response to dataframe</a>
+                  </li>
+                  <li>
+                    <a href="#dataframe-to-csv" class="toc-h2 toc-link" data-title="Dataframe to csv">Dataframe to csv</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#tutorial-values" class="toc-h1 toc-link" data-title="Tutorial Values">Tutorial Values</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#imports" class="toc-h2 toc-link" data-title="Imports">Imports</a>
+                  </li>
+                  <li>
+                    <a href="#request" class="toc-h2 toc-link" data-title="Request">Request</a>
+                  </li>
+                  <li>
+                    <a href="#response" class="toc-h2 toc-link" data-title="Response">Response</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#metadataservice" class="toc-h1 toc-link" data-title="Metadataservice">Metadataservice</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#ophalencatalogus" class="toc-h2 toc-link" data-title="OphalenCatalogus">OphalenCatalogus</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#onlinewaarnemingenservice" class="toc-h1 toc-link" data-title="OnlineWaarnemingenservice">OnlineWaarnemingenservice</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#ophalenwaarnemingen" class="toc-h2 toc-link" data-title="OphalenWaarnemingen">OphalenWaarnemingen</a>
+                  </li>
+                  <li>
+                    <a href="#ophalenlaatstewaarnemingen" class="toc-h2 toc-link" data-title="OphalenLaatsteWaarnemingen">OphalenLaatsteWaarnemingen</a>
+                  </li>
+                  <li>
+                    <a href="#checkwaarnemingenaanwezig" class="toc-h2 toc-link" data-title="CheckWaarnemingenAanwezig">CheckWaarnemingenAanwezig</a>
+                  </li>
+                  <li>
+                    <a href="#ophalenaantalwaarnemingen" class="toc-h2 toc-link" data-title="OphalenAantalWaarnemingen">OphalenAantalWaarnemingen</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#bulkwaarnemingservice" class="toc-h1 toc-link" data-title="BulkWaarnemingService">BulkWaarnemingService</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#aanvragenbulkwaarnemingen" class="toc-h2 toc-link" data-title="AanvragenBulkWaarnemingen">AanvragenBulkWaarnemingen</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#file-is-created-the-applicant-is-informed-that-it-can-be-dodwnloaded-from-a-remote-location" class="toc-h1 toc-link" data-title="file is created the applicant is informed that it can be dodwnloaded from a remote location.">file is created the applicant is informed that it can be dodwnloaded from a remote location.</a>
+          </li>
+          <li>
+            <a href="#webfeatureservices" class="toc-h1 toc-link" data-title="WebFeatureServices">WebFeatureServices</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#locaties" class="toc-h2 toc-link" data-title="Locaties">Locaties</a>
+                  </li>
+                  <li>
+                    <a href="#locatiesmetlaatstewaarneming" class="toc-h2 toc-link" data-title="LocatiesMetLaatsteWaarneming">LocatiesMetLaatsteWaarneming</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#version" class="toc-h1 toc-link" data-title="Version">Version</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#python" class="toc-h2 toc-link" data-title="Python">Python</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href="https://waterinfo.rws.nl/#!/nav/index/">Website Waterinfo</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1><pre class="highlight python tab-python"><code><span class="o">//</span> <span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show
+</code></pre>
+<aside class="notice">
+Check the following languages  on the right  ------ >
+</aside>
+
+<p>The system is intended to access/retrieve  data from the distributie laag through web services. the
+data is accessed through five web services (three HTTP JSON web services and two WFS
+web service):</p>
+
+<table><thead>
+<tr>
+<th>Webservices</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>MetadataService</td>
+</tr>
+<tr>
+<td>Online Waarnemingen Service</td>
+</tr>
+<tr>
+<td>Bulk Waarnemingen Service</td>
+</tr>
+<tr>
+<td>Web Feature Service</td>
+</tr>
+<tr>
+<td>Web Mapping Service</td>
+</tr>
+</tbody></table>
+
+<p><strong>Metadata Service</strong> </p>
+
+<p>The Metadata Service has one function:</p>
+
+<table><thead>
+<tr>
+<th>Function</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Ophalen Catalogus</td>
+</tr>
+</tbody></table>
+
+<p>A request for this service will provide several lists of metadata from the
+distributie laag. On the basis of the data in these lists, you can fill the request for other services.</p>
+
+<p><strong>OnlineWaarnemingenServices</strong></p>
+
+<p>The OnlineWaarnemingenServices has four functions:</p>
+
+<table><thead>
+<tr>
+<th>Function</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Ophalen Waarnemingen</td>
+</tr>
+<tr>
+<td>Ophalen Laatste Waarnemingen</td>
+</tr>
+<tr>
+<td>Ophalen Aantal Waarnemingen</td>
+</tr>
+<tr>
+<td>Check Waarnemingen Aanwezig</td>
+</tr>
+</tbody></table>
+
+<p>With a request to the  <strong>Ophalenwaarnemingen service</strong> it&#39;s possible to get all observations with the right parameters. These parameters need to relate to <strong>Aquometadata</strong>, <strong>Locatie</strong> and <strong>Periode</strong> where de observations are done. A request to the <strong>OphalenLaasteWaarnemingenService</strong> will return the last obervation. The service <strong>OphalenLaatsteWaarnemingen</strong> returns observations per grouped specified grouping on period. The <strong>CheckWaarnemingenAanwezigService</strong> returns the observations from the distributie laag wich are those that comply with the parameters provided.</p>
+
+<p><strong>BulkWaarnemingenService</strong></p>
+
+<p>The BulkWaarnemingenService has one function:</p>
+
+<table><thead>
+<tr>
+<th>Function</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Aanvragen Bulk Waarnemingen</td>
+</tr>
+</tbody></table>
+
+<p>With the <strong>AanvragenBulkWaarnemingen</strong> service an application can be made to a
+a server that can be downloaded from a Rijkswaterstaat server at a later time.</p>
+
+<p><strong>Web Feature Service</strong></p>
+
+<p>The Web Feature Service has two functions:</p>
+
+<table><thead>
+<tr>
+<th>Function</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Locaties</td>
+</tr>
+<tr>
+<td>Locaties Met Laatste Waarneming</td>
+</tr>
+</tbody></table>
+
+<p>With the Mapserver, the geometry within the distributie laag is made available through Web
+Feature Service. Through the <strong>Web Feature Service</strong> you can find the locaties and locaties in combination with the last 
+observation.</p>
+
+<p><strong>Web Mapping Service</strong></p>
+
+<p>The Web Mapping Service has three functions:</p>
+
+<table><thead>
+<tr>
+<th>Function</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>WMS versie 1.1.0</td>
+</tr>
+<tr>
+<td>WMS versie 1.1.1</td>
+</tr>
+<tr>
+<td>WMS versie 1.3.0</td>
+</tr>
+</tbody></table>
+
+<p>The Mapping service responds to an xml request with a description of the layers.
+The Getmap service provides an image of the specified area.
+The Getfeature provides the details of a feature per location as an response.</p>
+
+<p><strong>Dependence</strong></p>
+
+<p>The web services depend on the distributie laag. When the distributie laag is not functioning properly,
+this has an influence on the functioning of the web services. Requests within all web services and the Web Feature Service
+make use of the Locatie, Aquometadata and Waarnemingen in the distributie laag.</p>
+
+<p><strong>Dates</strong></p>
+
+<p>If you are using dates in the request statements within the services you need to keep the following format:</p>
+
+<table><thead>
+<tr>
+<th>Year</th>
+<th>Month</th>
+<th>Day</th>
+<th>Separator</th>
+<th>Hours</th>
+<th>Minutes</th>
+<th>Seconds</th>
+<th>Time zone</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>0000</td>
+<td>00</td>
+<td>00</td>
+<td>T</td>
+<td>00</td>
+<td>00</td>
+<td>000</td>
+<td>00:00</td>
+</tr>
+</tbody></table>
+
+<p>For more information on the format <a href = "https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations">ISO 8601</a></p>
+<h2 id='applications'>Applications</h2>
+<p>When the webservices are used it&#39;s possible to use the following applications. This is not a requirement. It&#39;s also possible to use your own applications.</p>
+<h3 id='postman'>Postman</h3>
+<table><thead>
+<tr>
+<th>Naam</th>
+<th>Link to Documentation</th>
+<th>Version</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Postman</td>
+<td>https://www.getpostman.com/</td>
+<td>6.5.3</td>
+</tr>
+</tbody></table>
+
+<p>Postman can be used to test the POST requests to the webservices. Within Postman there different options wich can be used to make it less hard to understand the services.</p>
+<h3 id='visual-studio-code'>Visual studio Code</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Link to documentation</th>
+<th>Version</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Visual Studio Code</td>
+<td>https://code.visualstudio.com/</td>
+<td>darwin stable</td>
+</tr>
+</tbody></table>
+
+<p>Visual Studio Code is a tool that can be used to create different scripts and applications. Within the application its possible to install serveral modules to make it easy to use the webservices.</p>
+<h1 id='tutorial-locations'>Tutorial Locations</h1><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">check</span> <span class="n">Python</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">//Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code>//Nothing to show check Python
+</code></pre>
+<p>The following code shows step by step how to get a list of Locaties from the Metadatawebservice service. Within the code you get 2 csv-files </p>
+
+<table><thead>
+<tr>
+<th>CSV- files</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>true.csv</td>
+<td>This will contain all locations with the value true(there is information)</td>
+</tr>
+<tr>
+<td>false.csv</td>
+<td>This will contain all locations with the value false(there is no information)</td>
+</tr>
+</tbody></table>
+<h2 id='import'>Import</h2><pre class="highlight python tab-python"><code><span class="c">#within python you use the following imports</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">pytz</span>
+<span class="kn">import</span> <span class="nn">objectpath</span>
+<span class="kn">import</span> <span class="nn">time</span> 
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">gmtime</span><span class="p">,</span> <span class="n">strftime</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
+</code></pre>
+<p>The following imports are needed to get values from the webservice Metadataservice in python.
+<aside class="notice">
+If you are using the following code you will need all the imports. At the end there will be a version list.
+</aside></p>
+<h2 id='webservices'>Webservices</h2><pre class="highlight python tab-python"><code><span class="c">#the webservices</span>
+<span class="n">collect_catalogus</span> <span class="o">=</span> <span class="p">(</span><span class="s">'https://waterwebservices.rijkswaterstaat.nl/'</span> <span class="o">+</span>
+                     <span class="s">'METADATASERVICES_DBO/'</span> <span class="o">+</span>
+                     <span class="s">'OphalenCatalogus/'</span><span class="p">)</span>
+<span class="n">collect_observations</span> <span class="o">=</span> <span class="p">(</span><span class="s">'https://waterwebservices.rijkswaterstaat.nl/'</span> <span class="o">+</span>
+                        <span class="s">'ONLINEWAARNEMINGENSERVICES_DBO/'</span> <span class="o">+</span>
+                        <span class="s">'OphalenWaarnemingen'</span><span class="p">)</span>
+<span class="n">collect_count_observations</span> <span class="o">=</span> <span class="p">(</span><span class="s">'https://waterwebservices.rijkswaterstaat.nl'</span> <span class="o">+</span>
+                              <span class="s">'/ONLINEWAARNEMINGENSERVICES_DBO/CheckWaarnemingenAanwezig'</span><span class="p">)</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
+</code></pre>
+<p>you need 3 different webservices: </p>
+
+<table><thead>
+<tr>
+<th>Webservice</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OphalenCatalogus</td>
+</tr>
+<tr>
+<td>OphalenWaarnemingen</td>
+</tr>
+<tr>
+<td>CheckWaarnemingenAanwezig</td>
+</tr>
+</tbody></table>
+<h2 id='request-ophalencatalogus'>Request OphalenCatalogus</h2><pre class="highlight python tab-python"><code><span class="c">#The request for ophalencatalogus</span>
+<span class="n">request</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"CatalogusFilter"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">"Eenheden"</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+        <span class="s">"Grootheden"</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+        <span class="s">"Hoedanigheden"</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+        <span class="s">"Compartimenten"</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+        <span class="s">"Compartimenten"</span><span class="p">:</span> <span class="bp">True</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
+</code></pre>
+<p>This is the request you need to define in the code:</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Eenheden</td>
+<td>true/false</td>
+<td>This will  show the Eenheden.</td>
+</tr>
+<tr>
+<td>Grootheden</td>
+<td>true/false</td>
+<td>This will show the Grootheden.</td>
+</tr>
+<tr>
+<td>Hoedanigheden</td>
+<td>true/false</td>
+<td>This will show the Hoedanigheden.</td>
+</tr>
+<tr>
+<td>Compartimenten</td>
+<td>true/false</td>
+<td>This will show the Compartimenten.</td>
+</tr>
+<tr>
+<td>Parameters</td>
+<td>true/false</td>
+<td>This will show the Parameters.</td>
+</tr>
+</tbody></table>
+
+<aside class="warning">If you want to use the python code described in this documentation you will need to set all the values to true</aside>
+<h2 id='start-end-date'>Start/End date</h2><pre class="highlight python tab-python"><code><span class="n">huidige_datum</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+<span class="c">#einddatum word nu de huidige tijd en datum ingevoerd. </span>
+<span class="c">#Je kan ook je eigen datum en tijd invoeren comment deze 3 regels dan uit.</span>
+<span class="n">eind_datum</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">huidige_datum</span><span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">'</span><span class="si">%</span><span class="s">Y-</span><span class="si">%</span><span class="s">m-</span><span class="si">%</span><span class="s">dT</span><span class="si">%</span><span class="s">H:</span><span class="si">%</span><span class="s">M:</span><span class="si">%</span><span class="s">S'</span><span class="p">)</span>
+<span class="n">eind_datum</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">eind_datum</span><span class="p">)</span> <span class="o">-</span> <span class="n">pd</span><span class="o">.</span><span class="n">DateOffset</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">29</span><span class="p">)</span>
+<span class="n">eind_datum</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">eind_datum</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">" "</span><span class="p">,</span><span class="s">"T"</span><span class="p">)</span><span class="o">+</span><span class="s">".000+01:00"</span>
+
+<span class="c">#deze is op het jaar 1900 neergezet om te kijken of er ooit gegevens zijn toegevoegt. </span>
+<span class="c">#Je kan ook je eigen datums invullen gebruik wel dit format</span>
+<span class="n">begin_datum</span> <span class="o">=</span><span class="s">"1900-01-01T00:00:00.000+01:00"</span>
+
+<span class="c">#de code voor het compartiment.</span>
+<span class="n">Code_compartiment</span> <span class="o">=</span> <span class="s">"OW"</span>
+
+<span class="c">#de code voor de eenheid.</span>
+<span class="n">Code_eenheid</span> <span class="o">=</span> <span class="s">"cm"</span>
+
+<span class="c">#hier word de lege dataframe df_locatie aangemaakt.</span>
+<span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Code'</span><span class="p">,</span><span class="s">'true/false'</span><span class="p">]</span>
+
+<span class="n">df_locatie</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
+</code></pre>
+<p>Within the request for <strong>CheckWaarnemingenAanwezig</strong> you need to set the following values:</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>eind_datum</td>
+<td>0000-00-00T00:00:00.000+01:00</td>
+<td>This is the format to define the date and time</td>
+</tr>
+<tr>
+<td>Begin_datum</td>
+<td>0000-00-00T00:00:00.000+01:00</td>
+<td>This is the format to define the date and time</td>
+</tr>
+<tr>
+<td>Compartimenten</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This will show the Compartimenten.</td>
+</tr>
+<tr>
+<td>Eenheden</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This will  show the Eenheden.</td>
+</tr>
+</tbody></table>
+
+<aside class="warning">for the start and end date you need to use <code>0000-00-00T00:00:00.000+01:00</code> as format</aside>
+<h2 id='transform-json-response'>Transform JSON response</h2><pre class="highlight python tab-python"><code><span class="c">#hier word de locatie lijst gepulled van de api en in een json format opgeslagen.</span>
+<span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">collect_catalogus</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="c"># hier word dataframe df_locaties aangemaakt.</span>
+<span class="n">df_locations</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s">'LocatieLijst'</span><span class="p">])</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
+</code></pre>
+<p>The following code transforms the json response to an dataframe.</p>
+<h2 id='check-information'>Check information</h2><pre class="highlight python tab-python"><code><span class="c">#voor elke regel in het dataframe df_locations </span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df_locations</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+<span class="c">#haal de x waarde op</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="s">"X"</span><span class="p">)</span>
+
+<span class="c">#haal de y waarde op </span>
+    <span class="n">y</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="s">"Y"</span><span class="p">)</span>
+
+<span class="c">#haal de locatie code op </span>
+    <span class="n">locatie</span><span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="s">"Code"</span><span class="p">)</span>
+
+<span class="c">#Hier word de request aangemaakt. alle variabele worden automatisch ingevoerd. </span>
+    <span class="n">request_aantal</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">"AquoMetadataLijst"</span> <span class="p">:[{</span><span class="s">"Compartiment"</span><span class="p">:{</span><span class="s">"Code"</span><span class="p">:</span><span class="n">Code_compartiment</span><span class="p">},</span>
+        <span class="s">"Eenheid"</span><span class="p">:{</span><span class="s">"Code"</span><span class="p">:</span><span class="n">Code_eenheid</span><span class="p">}}],</span>
+        <span class="s">"LocatieLijst"</span> <span class="p">:</span> <span class="p">[{</span><span class="s">"X"</span> <span class="p">:</span><span class="n">x</span><span class="p">,</span><span class="s">"Y"</span><span class="p">:</span><span class="n">y</span><span class="p">,</span><span class="s">"Code"</span><span class="p">:</span><span class="n">locatie</span><span class="p">}],</span>
+        <span class="s">"Periode"</span> <span class="p">:</span> <span class="p">{</span><span class="s">"Begindatumtijd"</span> <span class="p">:</span> <span class="n">begin_datum</span><span class="p">,</span><span class="s">"Einddatumtijd"</span><span class="p">:</span> <span class="n">eind_datum</span><span class="p">}</span>
+    <span class="p">}</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
+</code></pre>
+<p>To check if a location has information you need to send a new request to <strong>CheckWaarnemingAanwezig</strong>. The code will do it for every location in a for loop.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>eind_datum</td>
+<td>0000-00-00T00:00:00.000+01:00</td>
+<td>This is the format to define the date and time</td>
+</tr>
+<tr>
+<td>Begin_datum</td>
+<td>0000-00-00T00:00:00.000+01:00</td>
+<td>This is the format to define the date and time</td>
+</tr>
+<tr>
+<td>Compartimenten</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This will show the Compartimenten.</td>
+</tr>
+<tr>
+<td>Eenheden</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This will  show the Eenheden.</td>
+</tr>
+</tbody></table>
+<h2 id='response-to-dataframe'>Response to dataframe</h2><pre class="highlight python tab-python"><code><span class="c">#hier word een nieuwe statement uitgevoerd op check aantal waarnemingen </span>
+<span class="c">#om te kijken of de request een response geeft met waardes</span>
+    <span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">collect_count_observations</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">request_aantal</span><span class="p">)</span>
+    <span class="n">result_aantal</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="c">#hier word in het resultaat gezocht naar het object waarnemingen aanwezig</span>
+    <span class="n">jsonnn_tree</span> <span class="o">=</span> <span class="n">objectpath</span><span class="o">.</span><span class="n">Tree</span><span class="p">(</span><span class="n">result_aantal</span><span class="p">)</span>
+    <span class="n">resultaat</span> <span class="o">=</span>  <span class="nb">tuple</span><span class="p">(</span><span class="n">jsonnn_tree</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">'$..WaarnemingenAanwezig'</span><span class="p">))</span>
+    <span class="n">resultaat</span> <span class="o">=</span> <span class="n">resultaat</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c">#als de waarde van de api true is </span>
+    <span class="k">if</span> <span class="n">resultaat</span> <span class="o">==</span> <span class="s">"true"</span><span class="p">:</span>
+        <span class="n">lijst</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="n">locatie</span><span class="p">,</span><span class="n">resultaat</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">(</span><span class="s">'Code'</span><span class="p">,</span><span class="s">'true/false'</span><span class="p">))</span>
+        <span class="n">df_locatie</span> <span class="o">=</span> <span class="n">df_locatie</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lijst</span><span class="p">)</span>
+
+<span class="c">#als de waarde van de api false is </span>
+    <span class="k">elif</span> <span class="n">resultaat</span> <span class="o">==</span> <span class="s">"false"</span><span class="p">:</span>
+        <span class="n">lijst</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="n">locatie</span><span class="p">,</span><span class="n">resultaat</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">(</span><span class="s">'Code'</span><span class="p">,</span><span class="s">'true/false'</span><span class="p">))</span>
+        <span class="n">df_locatie</span> <span class="o">=</span> <span class="n">df_locatie</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lijst</span><span class="p">)</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
+</code></pre>
+<p>within the for loop you need to check if there are values. The response and the location wil be send to the right dataframe. </p>
+
+<table><thead>
+<tr>
+<th>Table</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>true.csv</td>
+<td>This will contain all locations with the value true(there is information)</td>
+</tr>
+<tr>
+<td>false.csv</td>
+<td>This will contain all locations with the value false(there is no information)</td>
+</tr>
+</tbody></table>
+<h2 id='dataframe-to-csv'>Dataframe to csv</h2><pre class="highlight python tab-python"><code><span class="c">#de waarde van resultaat en de code an de locatie word vervolgens toevegoegd </span>
+<span class="c">#aan een nieuwe dataframe ofwel de true ofwel de false</span>
+<span class="n">df_true</span> <span class="o">=</span> <span class="n">df_locatie</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_locatie</span><span class="p">[</span><span class="s">'true/false'</span><span class="p">]</span> <span class="o">==</span> <span class="s">"true"</span><span class="p">]</span>
+<span class="n">df_false</span> <span class="o">=</span> <span class="n">df_locatie</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_locatie</span><span class="p">[</span> <span class="s">'true/false'</span><span class="p">]</span> <span class="o">==</span> <span class="s">"false"</span><span class="p">]</span>
+
+<span class="c"># Zowel voor true als voor false word een csv bestand aangemaakt </span>
+<span class="c">#en worden de gegevens weggeschreven.</span>
+
+<span class="c"># Create a Pandas Excel writer using XlsxWriter as the engine.</span>
+<span class="n">writer</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">ExcelWriter</span><span class="p">(</span><span class="s">'true.xlsx'</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s">'xlsxwriter'</span><span class="p">)</span>
+
+<span class="c"># Convert the dataframe to an XlsxWriter Excel object.</span>
+<span class="n">df_true</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'Sheet1'</span><span class="p">)</span>
+
+<span class="c"># Close the Pandas Excel writer and output the Excel file.</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+<span class="n">writer</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">ExcelWriter</span><span class="p">(</span><span class="s">'false.xlsx'</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s">'xlsxwriter'</span><span class="p">)</span>
+
+<span class="c"># Convert the dataframe to an XlsxWriter Excel object.</span>
+<span class="n">df_false</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'Sheet1'</span><span class="p">)</span>
+
+<span class="c"># Close the Pandas Excel writer and output the Excel file.</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python 
+</code></pre>
+<p>This will send all your dataframes wich you created to 2 different csv files:</p>
+
+<table><thead>
+<tr>
+<th>Table</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>true.csv</td>
+<td>This will contain all locations with the value true(there is information).</td>
+</tr>
+<tr>
+<td>false.csv</td>
+<td>This will contain all locations with the value false(there is no information).</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+It's possible to change de names of the files. check the code.
+</aside>
+<h1 id='tutorial-values'>Tutorial Values</h1><pre class="highlight python tab-python"><code><span class="o">//</span> <span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show
+</code></pre>
+<p>The following tutorial will show multiple lists. Within the these lists you will see the following parameters.</p>
+
+<table><thead>
+<tr>
+<th>Sheets</th>
+<th>Description</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Grootheden</td>
+<td>This list Grootheden that can be used in the webservices</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>Parameters</td>
+<td>This list Parameters that can be used in the webservices</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>Compartimenten</td>
+<td>This list Compartimenten that can be used in the webservices</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>Hoedanigheden</td>
+<td>This list Hoedanigheden that can be used in the webservices</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>Eenheden</td>
+<td>This list Eenheden that can be used in the webservices</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>BemonsteringsApparaten</td>
+<td>This list BemonsteringsApparaten that can be used in the webservices</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>BemonsteringsMethoden</td>
+<td>This list BemonsteringsMethoden that can be used in the webservices</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>BemonsteringsSoorten</td>
+<td>This list BemonsteringsSoorten that can be used in the webservices</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>BioTaxon</td>
+<td>This list BioTaxon that can be used in the webservices</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>BioTaxon_Compartimenten</td>
+<td>This list BioTaxon_Compartimenten that can be used in the webservices</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>MeetApparaten</td>
+<td>This list MeetApparaten that can be used in the webservices</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>MonsterBewerkingsMethoden</td>
+<td>This list MonsterBewerkingsMethoden that can be used in the webservices</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>Organen</td>
+<td>This list Organen that can be used in the webservices</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>PlaatsBepalingsApparaten</td>
+<td>This list PlaatsBepalingsApparaten that can be used in the webservices</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>Typeringen</td>
+<td>This list Typeringen that can be used in the webservices</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>WaardeBepalingstechnieken</td>
+<td>This list WaardeBepalingstechnieken that can be used in the webservices</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>WaardeBepalingsmethoden</td>
+<td>This list WaardeBepalingsmethoden that can be used in the webservices</td>
+<td>True/False</td>
+</tr>
+<tr>
+<td>WaardeBewerkingsmethoden</td>
+<td>This list WaardeBewerkingsmethoden that can be used in the webservices</td>
+<td>True/False</td>
+</tr>
+</tbody></table>
+<h2 id='imports'>Imports</h2><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show
+</code></pre>
+<p>The following imports are needed to get values from the webservice Metadataservice in python and use this tutorial. </p>
+
+<aside class="notice">
+If you are using the following code you will need all the imports. At the end there will be a version list.
+</aside>
+<h2 id='request'>Request</h2><pre class="highlight python tab-python"><code>
+<span class="n">collect_catalogus</span> <span class="o">=</span> <span class="p">(</span><span class="s">'https://waterwebservices.rijkswaterstaat.nl/METADATASERVICES_DBO/OphalenCatalogus/'</span><span class="p">)</span>
+
+
+<span class="c"># get station information from DDL (metadata uit Catalogus)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="p">{</span>  
+<span class="s">"CatalogusFilter"</span><span class="p">:</span>
+    <span class="p">{</span> 
+    <span class="s">"Grootheden"</span> <span class="p">:</span><span class="bp">True</span><span class="p">,</span>
+    <span class="s">"Parameters"</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span>
+    <span class="s">"Compartimenten"</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span>
+    <span class="s">"Hoedanigheden"</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span>
+    <span class="s">"Eenheden"</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span>
+    <span class="s">"BemonsteringsApparaten"</span> <span class="p">:</span><span class="bp">True</span><span class="p">,</span>
+    <span class="s">"BemonsteringsMethoden"</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span>
+    <span class="s">"BemonsteringsSoorten"</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span>
+    <span class="s">"BioTaxon"</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span>
+    <span class="s">"BioTaxon_Compartimenten"</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span>
+    <span class="s">"MeetApparaten"</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span>
+    <span class="s">"MonsterBewerkingsMethoden"</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span>
+    <span class="s">"Organen"</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span>
+    <span class="s">"PlaatsBepalingsApparaten"</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span>
+    <span class="s">"Typeringen"</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span>
+    <span class="s">"WaardeBepalingstechnieken"</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span>
+    <span class="s">"WaardeBepalingsmethoden"</span><span class="p">:</span><span class="bp">True</span><span class="p">,</span>
+    <span class="s">"WaardeBewerkingsmethoden"</span><span class="p">:</span><span class="bp">True</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
+</code></pre>
+<p>This code is the request that is needed to send to the webservice.</p>
+<h2 id='response'>Response</h2><pre class="highlight python tab-python"><code><span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">collect_catalogus</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+
+
+<span class="c"># print all variables in the catalogus</span>
+<span class="n">df_metadata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">json_normalize</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s">'AquoMetadataLijst'</span><span class="p">])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s">'AquoMetadata_MessageID'</span><span class="p">)</span>
+
+<span class="c"># Create new frames with all values</span>
+<span class="n">df_Compartiment</span> <span class="o">=</span> <span class="n">df_metadata</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">'Compartiment.Code'</span><span class="p">])</span>
+<span class="n">df_Compartiment</span> <span class="o">=</span> <span class="n">df_Compartiment</span><span class="p">[[</span><span class="s">'Compartiment.Code'</span><span class="p">,</span><span class="s">'Compartiment.Omschrijving'</span><span class="p">]]</span>
+
+<span class="n">df_Parameters</span> <span class="o">=</span> <span class="n">df_metadata</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">'Parameter.Code'</span><span class="p">])</span>
+<span class="n">df_Parameters</span> <span class="o">=</span> <span class="n">df_Parameters</span><span class="p">[[</span><span class="s">'Parameter.Code'</span><span class="p">,</span><span class="s">'Parameter.Omschrijving'</span><span class="p">]]</span>
+
+<span class="n">df_Eenheden</span> <span class="o">=</span> <span class="n">df_metadata</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">'Eenheid.Code'</span><span class="p">])</span>
+<span class="n">df_Eenheden</span> <span class="o">=</span> <span class="n">df_Eenheden</span><span class="p">[[</span><span class="s">'Eenheid.Code'</span><span class="p">,</span><span class="s">'Eenheid.Omschrijving'</span><span class="p">]]</span>
+
+<span class="n">df_Grootheden</span> <span class="o">=</span> <span class="n">df_metadata</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">'Grootheid.Code'</span><span class="p">])</span>
+<span class="n">df_Grootheden</span> <span class="o">=</span> <span class="n">df_Grootheden</span><span class="p">[[</span><span class="s">'Grootheid.Code'</span><span class="p">,</span><span class="s">'Grootheid.Omschrijving'</span><span class="p">]]</span>
+
+<span class="n">df_Hoedanigheden</span> <span class="o">=</span> <span class="n">df_metadata</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">'Hoedanigheid.Code'</span><span class="p">])</span>
+<span class="n">df_Hoedanigheden</span> <span class="o">=</span> <span class="n">df_Hoedanigheden</span><span class="p">[[</span><span class="s">'Hoedanigheid.Code'</span><span class="p">,</span><span class="s">'Hoedanigheid.Omschrijving'</span><span class="p">]]</span>
+
+<span class="n">df_BemonsteringsApparaten</span> <span class="o">=</span> <span class="n">df_metadata</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">'BemonsteringsApparaat.Code'</span><span class="p">])</span>
+<span class="n">df_BemonsteringsApparaten</span> <span class="o">=</span> <span class="n">df_BemonsteringsApparaten</span><span class="p">[[</span><span class="s">'BemonsteringsApparaat.Code'</span><span class="p">,</span><span class="s">'BemonsteringsApparaat.Omschrijving'</span><span class="p">]]</span>
+
+<span class="n">df_BemonsteringsMethoden</span> <span class="o">=</span> <span class="n">df_metadata</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">'BemonsteringsMethode.Code'</span><span class="p">])</span>
+<span class="n">df_BemonsteringsMethoden</span> <span class="o">=</span> <span class="n">df_BemonsteringsMethoden</span><span class="p">[[</span><span class="s">'BemonsteringsMethode.Code'</span><span class="p">,</span><span class="s">'BemonsteringsMethode.Omschrijving'</span><span class="p">]]</span>
+
+<span class="n">df_BemonsteringsSoorten</span> <span class="o">=</span> <span class="n">df_metadata</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">'BemonsteringsSoort.Code'</span><span class="p">])</span>
+<span class="n">df_BemonsteringsSoorten</span> <span class="o">=</span> <span class="n">df_BemonsteringsSoorten</span><span class="p">[[</span><span class="s">'BemonsteringsSoort.Code'</span><span class="p">,</span><span class="s">'BemonsteringsSoort.Omschrijving'</span><span class="p">]]</span>
+
+<span class="n">df_BioTaxon</span> <span class="o">=</span> <span class="n">df_metadata</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">'BioTaxon.Code'</span><span class="p">])</span>
+<span class="n">df_BioTaxon</span> <span class="o">=</span> <span class="n">df_BioTaxon</span><span class="p">[[</span><span class="s">'BioTaxon.Code'</span><span class="p">,</span><span class="s">'BioTaxon.Omschrijving'</span><span class="p">]]</span>
+
+<span class="n">df_BioTaxon_Compartimenten</span> <span class="o">=</span> <span class="n">df_metadata</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">'BioTaxon_Compartiment.Code'</span><span class="p">])</span>
+<span class="n">df_BioTaxon_Compartimenten</span><span class="o">=</span> <span class="n">df_BioTaxon_Compartimenten</span><span class="p">[[</span><span class="s">'BioTaxon_Compartiment.Code'</span><span class="p">,</span><span class="s">'BioTaxon_Compartiment.Omschrijving'</span><span class="p">]]</span>
+
+<span class="n">df_MeetApparaten</span> <span class="o">=</span> <span class="n">df_metadata</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">'MeetApparaat.Code'</span><span class="p">])</span>
+<span class="n">df_MeetApparaten</span> <span class="o">=</span> <span class="n">df_MeetApparaten</span><span class="p">[[</span><span class="s">'MeetApparaat.Code'</span><span class="p">,</span><span class="s">'MeetApparaat.Omschrijving'</span><span class="p">]]</span>
+
+<span class="n">df_MonsterBewerkingsMethoden</span> <span class="o">=</span> <span class="n">df_metadata</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">'MonsterBewerkingsMethode.Code'</span><span class="p">])</span>
+<span class="n">df_MonsterBewerkingsMethoden</span> <span class="o">=</span> <span class="n">df_MonsterBewerkingsMethoden</span><span class="p">[[</span><span class="s">'MonsterBewerkingsMethode.Code'</span><span class="p">,</span><span class="s">'MonsterBewerkingsMethode.Omschrijving'</span><span class="p">]]</span>
+
+<span class="n">df_Organen</span><span class="o">=</span> <span class="n">df_metadata</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">'Orgaan.Code'</span><span class="p">])</span>
+<span class="n">df_Organen</span> <span class="o">=</span> <span class="n">df_Organen</span><span class="p">[[</span><span class="s">'Orgaan.Code'</span><span class="p">,</span><span class="s">'Orgaan.Omschrijving'</span><span class="p">]]</span>
+
+<span class="n">df_PlaatsBepalingsApparaten</span> <span class="o">=</span> <span class="n">df_metadata</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">'PlaatsBepalingsApparaat.Code'</span><span class="p">])</span>
+<span class="n">df_PlaatsBepalingsApparaten</span> <span class="o">=</span> <span class="n">df_PlaatsBepalingsApparaten</span><span class="p">[[</span><span class="s">'PlaatsBepalingsApparaat.Code'</span><span class="p">,</span><span class="s">'PlaatsBepalingsApparaat.Omschrijving'</span><span class="p">]]</span>
+
+<span class="n">df_Typeringen</span><span class="o">=</span> <span class="n">df_metadata</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">'Typering.Code'</span><span class="p">])</span>
+<span class="n">df_Typeringen</span><span class="o">=</span> <span class="n">df_Typeringen</span><span class="p">[[</span><span class="s">'Typering.Code'</span><span class="p">,</span><span class="s">'Typering.Omschrijving'</span><span class="p">]]</span>
+
+<span class="n">df_WaardeBepalingstechnieken</span><span class="o">=</span> <span class="n">df_metadata</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">'WaardeBepalingstechniek.Code'</span><span class="p">])</span>
+<span class="n">df_WaardeBepalingstechnieken</span><span class="o">=</span> <span class="n">df_WaardeBepalingstechnieken</span><span class="p">[[</span><span class="s">'WaardeBepalingstechniek.Code'</span><span class="p">,</span><span class="s">'WaardeBepalingstechniek.Omschrijving'</span><span class="p">]]</span>
+
+<span class="n">df_WaardeBepalingsmethoden</span><span class="o">=</span> <span class="n">df_metadata</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">'WaardeBepalingsmethode.Code'</span><span class="p">])</span>
+<span class="n">df_WaardeBepalingsmethoden</span><span class="o">=</span> <span class="n">df_WaardeBepalingsmethoden</span><span class="p">[[</span><span class="s">'WaardeBepalingsmethode.Code'</span><span class="p">,</span><span class="s">'WaardeBepalingsmethode.Omschrijving'</span><span class="p">]]</span>
+
+<span class="n">df_WaardeBewerkingsmethoden</span><span class="o">=</span> <span class="n">df_metadata</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">'WaardeBewerkingsmethode.Code'</span><span class="p">])</span>
+<span class="n">df_WaardeBewerkingsmethoden</span><span class="o">=</span> <span class="n">df_WaardeBewerkingsmethoden</span><span class="p">[[</span><span class="s">'WaardeBewerkingsmethode.Code'</span><span class="p">,</span><span class="s">'WaardeBewerkingsmethode.Omschrijving'</span><span class="p">]]</span>
+
+<span class="c"># Create a Pandas Excel writer using XlsxWriter as the engine.</span>
+<span class="n">writer</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">ExcelWriter</span><span class="p">(</span><span class="s">'Values.xlsx'</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s">'xlsxwriter'</span><span class="p">)</span>
+
+<span class="c"># Convert the dataframe to an XlsxWriter Excel object.</span>
+<span class="n">df_Parameters</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'Parameters'</span><span class="p">)</span>
+<span class="n">df_Compartiment</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'Compartimenten'</span><span class="p">)</span>
+<span class="n">df_Eenheden</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'Eenheden'</span><span class="p">)</span>
+<span class="n">df_Hoedanigheden</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'Hoedanigheden'</span><span class="p">)</span>
+<span class="n">df_Grootheden</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'Grootheden'</span><span class="p">)</span>
+<span class="n">df_BemonsteringsApparaten</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'BemonsteringsApparaten'</span><span class="p">)</span>
+<span class="n">df_BemonsteringsMethoden</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'BemonsteringsMethoden'</span><span class="p">)</span>
+<span class="n">df_BemonsteringsSoorten</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'BemonsteringsSoorten'</span><span class="p">)</span>
+<span class="n">df_BioTaxon</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'BioTaxon'</span><span class="p">)</span>
+<span class="n">df_BioTaxon_Compartimenten</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'BioTaxon_Compartimenten'</span><span class="p">)</span>
+<span class="n">df_MeetApparaten</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'MeetApparaten'</span><span class="p">)</span>
+<span class="n">df_MonsterBewerkingsMethoden</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'MonsterBewerkingsMethoden'</span><span class="p">)</span>
+<span class="n">df_Organen</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'Organen'</span><span class="p">)</span>
+<span class="n">df_PlaatsBepalingsApparaten</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'PlaatsBepalingsApparaten'</span><span class="p">)</span>
+<span class="n">df_Typeringen</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'Typeringen'</span><span class="p">)</span>
+<span class="n">df_WaardeBepalingstechnieken</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'WaardeBepalingstechnieken'</span><span class="p">)</span>
+<span class="n">df_WaardeBepalingsmethoden</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'WaardeBepalingsmethoden'</span><span class="p">)</span>
+<span class="n">df_WaardeBewerkingsmethoden</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'WaardeBewerkingsmethoden'</span><span class="p">)</span>
+
+<span class="c"># Close the Pandas Excel writer and output the Excel file.</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
+</code></pre>
+<p>The following code will take the response and split all the values into 18 different Sheets: </p>
+
+<table><thead>
+<tr>
+<th>Sheets</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Grootheden</td>
+<td>This list Grootheden that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Parameters</td>
+<td>This list Parameters that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Compartimenten</td>
+<td>This list Compartimenten that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Hoedanigheden</td>
+<td>This list Hoedanigheden that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Eenheden</td>
+<td>This list Eenheden that can be used in the webservices</td>
+</tr>
+<tr>
+<td>BemonsteringsApparaten</td>
+<td>This list BemonsteringsApparaten that can be used in the webservices</td>
+</tr>
+<tr>
+<td>BemonsteringsMethoden</td>
+<td>This list BemonsteringsMethoden that can be used in the webservices</td>
+</tr>
+<tr>
+<td>BemonsteringsSoorten</td>
+<td>This list BemonsteringsSoorten that can be used in the webservices</td>
+</tr>
+<tr>
+<td>BioTaxon</td>
+<td>This list BioTaxon that can be used in the webservices</td>
+</tr>
+<tr>
+<td>BioTaxon_Compartimenten</td>
+<td>This list BioTaxon_Compartimenten that can be used in the webservices</td>
+</tr>
+<tr>
+<td>MeetApparaten</td>
+<td>This list MeetApparaten that can be used in the webservices</td>
+</tr>
+<tr>
+<td>MonsterBewerkingsMethoden</td>
+<td>This list MonsterBewerkingsMethoden that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Organen</td>
+<td>This list Organen that can be used in the webservices</td>
+</tr>
+<tr>
+<td>PlaatsBepalingsApparaten</td>
+<td>This list PlaatsBepalingsApparaten that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Typeringen</td>
+<td>This list Typeringen that can be used in the webservices</td>
+</tr>
+<tr>
+<td>WaardeBepalingstechnieken</td>
+<td>This list WaardeBepalingstechnieken that can be used in the webservices</td>
+</tr>
+<tr>
+<td>WaardeBepalingsmethoden</td>
+<td>This list WaardeBepalingsmethoden that can be used in the webservices</td>
+</tr>
+<tr>
+<td>WaardeBewerkingsmethoden</td>
+<td>This list WaardeBewerkingsmethoden that can be used in the webservices</td>
+</tr>
+</tbody></table>
+<h1 id='metadataservice'>Metadataservice</h1>
+<p>The metadata services web service unlocks the distribution layer metadata. On the basis of the request, a
+response is build on the basis of the request that is send with the given parameters.
+It is important to note that the metadata is not a 1 to 1 copy of how the data is saved in the distribution layer. It&#39;s a collection of data based on the parameters in the request that is requested to the service.</p>
+<h2 id='ophalencatalogus'>OphalenCatalogus</h2><pre class="highlight python tab-python"><code><span class="o">//</span> <span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">check</span> <span class="n">JSON</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="s2">"CatalogusFilter"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w"> 
+    </span><span class="s2">"Grootheden"</span><span class="w"> </span><span class="p">:</span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Parameters"</span><span class="p">:</span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Compartimenten"</span><span class="p">:</span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Hoedanigheden"</span><span class="p">:</span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Eenheden"</span><span class="p">:</span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"BemonsteringsApparaten"</span><span class="w"> </span><span class="p">:</span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"BemonsteringsMethoden"</span><span class="p">:</span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"BemonsteringsSoorten"</span><span class="p">:</span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"BioTaxon"</span><span class="p">:</span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"BioTaxon_Compartimenten"</span><span class="p">:</span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"MeetApparaten"</span><span class="p">:</span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"MonsterBewerkingsMethoden"</span><span class="p">:</span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Organen"</span><span class="p">:</span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"PlaatsBepalingsApparaten"</span><span class="p">:</span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Typeringen"</span><span class="p">:</span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"WaardeBepalingstechnieken"</span><span class="p">:</span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"WaardeBepalingsmethoden"</span><span class="p">:</span><span class="err">True</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"WaardeBewerkingsmethoden"</span><span class="p">:</span><span class="err">True</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code>
+<span class="o">{</span><span class="s2">"AquoMetadataLijst"</span>: <span class="o">[</span>
+ <span class="o">{</span>
+    <span class="s2">"AquoMetadata_MessageID"</span>: 1,
+    <span class="s2">"Parameter_Wat_Omschrijving"</span>: <span class="s2">"Waterhoogte Oppervlaktewater t.o.v. Mean Sea Level in cm"</span>,
+    <span class="s2">"Eenheid"</span>: <span class="o">{</span>
+        <span class="s2">"Code"</span>: <span class="s2">"cm"</span>,
+        <span class="s2">"Omschrijving"</span>: <span class="s2">"centimeter"</span>
+    <span class="o">}</span>,
+    <span class="s2">"Grootheid"</span>: <span class="o">{</span>
+        <span class="s2">"Code"</span>: <span class="s2">"WATHTE"</span>,
+        <span class="s2">"Omschrijving"</span>: <span class="s2">"Waterhoogte"</span>
+    <span class="o">}</span>,
+        <span class="s2">"Hoedanigheid"</span>: <span class="o">{</span>
+        <span class="s2">"Code"</span>: <span class="s2">"MSL"</span>,
+        <span class="s2">"Omschrijving"</span>: <span class="s2">"t.o.v. Mean Sea Level"</span>
+    <span class="o">}</span>
+ <span class="o">}</span>,
+</code></pre>
+<table><thead>
+<tr>
+<th>Methode</th>
+<th>Content-Type</th>
+<th>URL</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>POST</td>
+<td>application/json</td>
+<td>https://waterwebservices.rijkswaterstaat.nl/METADATASERVICES_DBO/OphalenCatalogus/</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Attributes</th>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Grootheden</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Grootheden that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Parameters</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Parameters that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Compartimenten</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Compartimenten that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Hoedanigheden</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Hoedanigheden that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Eenheden</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Eenheden that can be used in the webservices</td>
+</tr>
+<tr>
+<td>BemonsteringsApparaten</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list BemonsteringsApparaten that can be used in the webservices</td>
+</tr>
+<tr>
+<td>BemonsteringsMethoden</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list BemonsteringsMethoden that can be used in the webservices</td>
+</tr>
+<tr>
+<td>BemonsteringsSoorten</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list BemonsteringsSoorten that can be used in the webservices</td>
+</tr>
+<tr>
+<td>BioTaxon</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list BioTaxon that can be used in the webservices</td>
+</tr>
+<tr>
+<td>BioTaxon_Compartimenten</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list BioTaxon_Compartimenten that can be used in the webservices</td>
+</tr>
+<tr>
+<td>MeetApparaten</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list MeetApparaten that can be used in the webservices</td>
+</tr>
+<tr>
+<td>MonsterBewerkingsMethoden</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list MonsterBewerkingsMethoden that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Organen</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Organen that can be used in the webservices</td>
+</tr>
+<tr>
+<td>PlaatsBepalingsApparaten</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list PlaatsBepalingsApparaten that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Typeringen</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Typeringen that can be used in the webservices</td>
+</tr>
+<tr>
+<td>WaardeBepalingstechnieken</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list WaardeBepalingstechnieken that can be used in the webservices</td>
+</tr>
+<tr>
+<td>WaardeBepalingsmethoden</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list WaardeBepalingsmethoden that can be used in the webservices</td>
+</tr>
+<tr>
+<td>WaardeBewerkingsmethoden</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list WaardeBewerkingsmethoden that can be used in the webservices</td>
+</tr>
+</tbody></table>
+<h1 id='onlinewaarnemingenservice'>OnlineWaarnemingenservice</h1>
+<p>The Onlinewaarnemingen unlocks the distribution layer observations. Based on the request
+there observations and information about the number of observations collected and returned.</p>
+
+<table><thead>
+<tr>
+<th>Operations</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OphalenWaarnemingen</td>
+</tr>
+<tr>
+<td>OphalenLaatsteWaarnemingen</td>
+</tr>
+<tr>
+<td>OphalenAantalWaarnemingen</td>
+</tr>
+<tr>
+<td>CheckWaarnemingenAanwezig.</td>
+</tr>
+</tbody></table>
+<h2 id='ophalenwaarnemingen'>OphalenWaarnemingen</h2><pre class="highlight python tab-python"><code><span class="o">//</span> <span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">check</span> <span class="n">JSON</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"AquoPlusWaarnemingMetadata"</span><span class="p">:</span><span class="w">
+ </span><span class="p">{</span><span class="s2">"AquoMetadata"</span><span class="p">:{</span><span class="s2">"Compartiment"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"OW"</span><span class="p">},</span><span class="w">
+        </span><span class="s2">"Eenheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"cm"</span><span class="p">},</span><span class="w">
+        </span><span class="s2">"MeetApparaat"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"109"</span><span class="p">},</span><span class="w">
+        </span><span class="s2">"Grootheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"Hm0"</span><span class="p">}}},</span><span class="w">
+        </span><span class="s2">"Locatie"</span><span class="p">:{</span><span class="s2">"X"</span><span class="p">:</span><span class="mf">518882.333320247</span><span class="p">,</span><span class="s2">"Y"</span><span class="p">:</span><span class="mf">5760829.11729589</span><span class="p">,</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"EURPFM"</span><span class="p">},</span><span class="w">
+        </span><span class="s2">"Periode"</span><span class="p">:{</span><span class="s2">"Begindatumtijd"</span><span class="p">:</span><span class="s2">"2012-01-27T09:00:00.000+01:00"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"Einddatumtijd"</span><span class="p">:</span><span class="s2">"2012-01-27T09:01:00.000+01:00"</span><span class="p">}}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w"> 
+</span></code></pre><pre class="highlight shell tab-shell"><code><span class="o">{</span><span class="s2">"WaarnemingenLijst"</span>:[
+    <span class="o">{</span><span class="s2">"Locatie"</span>:<span class="o">{</span><span class="s2">"Locatie_MessageID"</span>:78411364,<span class="s2">"Coordinatenstelsel"</span>:<span class="s2">"25831"</span>,<span class="s2">"X"</span>:518882.333320247,<span class="s2">"Y"</span>:5760829.11729589,<span class="s2">"Naam"</span>:<span class="s2">"Europlatform"</span>,<span class="s2">"Code"</span>:<span class="s2">"EURPFM"</span><span class="o">}</span>,
+    <span class="s2">"MetingenLijst"</span>:[<span class="o">{</span><span class="s2">"Tijdstip"</span>:<span class="s2">"2012-01-27T09:00:00.000+01:00"</span>,
+    <span class="s2">"Meetwaarde"</span>:<span class="o">{</span><span class="s2">"Waarde_Numeriek"</span>:152.0<span class="o">}</span>,
+    <span class="s2">"WaarnemingMetadata"</span>:<span class="o">{</span><span class="s2">"StatuswaardeLijst"</span>:[<span class="s2">"Ongecontroleerd"</span><span class="o">]</span>,
+    <span class="s2">"BemonsteringshoogteLijst"</span>:[<span class="s2">"-999999999"</span><span class="o">]</span>,
+    <span class="s2">"ReferentievlakLijst"</span>:[<span class="s2">"NVT"</span><span class="o">]</span>,
+    <span class="s2">"OpdrachtgevendeInstantieLijst"</span>:[<span class="s2">"RIKZMON_GOLVEN"</span><span class="o">]</span>,
+    <span class="s2">"KwaliteitswaardecodeLijst"</span>:[<span class="s2">"00"</span><span class="o">]}}]</span>,
+    <span class="s2">"AquoMetadata"</span>:<span class="o">{</span><span class="s2">"AquoMetadata_MessageID"</span>:31234076,
+    <span class="s2">"Parameter_Wat_Omschrijving"</span>:<span class="s2">"Significante golfhoogte uit energiespectrum van 30-500 mHz Oppervlaktewater cm"</span>,
+    <span class="s2">"BemonsteringsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+    <span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+    <span class="s2">"BemonsteringsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+    <span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+    <span class="s2">"BemonsteringsSoort"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"01"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Rechtstreekse meting"</span><span class="o">}</span>,
+    <span class="s2">"BioTaxon"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"NVT"</span><span class="o">}</span>,
+    <span class="s2">"BioTaxon_Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"NVT"</span><span class="o">}</span>,
+    <span class="s2">"Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"OW"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Oppervlaktewater"</span><span class="o">}</span>,
+    <span class="s2">"Eenheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"cm"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"centimeter"</span><span class="o">}</span>,
+    <span class="s2">"Grootheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"Hm0"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Significantegolfhoogte uit energiespectrum van 30-500 mHz"</span><span class="o">}</span>,
+    <span class="s2">"Hoedanigheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waardeis niet van toepassing"</span><span class="o">}</span>,
+    <span class="s2">"MeetApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"109"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Radar"</span><span class="o">}</span>,
+    <span class="s2">"MonsterBewerkingsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+    <span class="s2">"Orgaan"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is nietvan toepassing"</span><span class="o">}</span>,
+    <span class="s2">"Parameter"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde isniet van toepassing"</span><span class="o">}</span>,
+    <span class="s2">"PlaatsBepalingsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+    <span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+    <span class="s2">"Typering"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is nietvan toepassing"</span><span class="o">}</span>,
+    <span class="s2">"WaardeBepalingstechniek"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving
+    "</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+    <span class="s2">"WaardeBepalingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"other:F046"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Freq/tijd analyse energie en richtingen, methodeCIC/GLFPAR"</span><span class="o">}</span>,
+    <span class="s2">"WaardeBewerkingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}}}]</span>,
+    <span class="s2">"Succesvol"</span>:true
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+<p>A sample request for retrieving observations in a certain period, which
+meet the specified Aquometadata, Locaties and Waarnemingen parameters.</p>
+
+<table><thead>
+<tr>
+<th>Methode</th>
+<th>Content-Type</th>
+<th>URL</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>POST</td>
+<td>application/json</td>
+<td>https://waterwebservices.rijkswaterstaat.nl/ONLINEWAARNEMINGENSERVICES_DBO/OphalenWaarnemingen</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Eenheden</td>
+<td><a href='/?python#tutorial-values'>List using Tutorial Values </a></td>
+<td>This will  show the Eenheden.</td>
+</tr>
+<tr>
+<td>Grootheden</td>
+<td><a href='/?python#tutorial-values'>List using Tutorial Values </a></td>
+<td>This will show the Grootheden.</td>
+</tr>
+<tr>
+<td>Hoedanigheden</td>
+<td><a href='/?python#tutorial-values'>List using Tutorial Values </a></td>
+<td>This will show the Hoedanigheden.</td>
+</tr>
+<tr>
+<td>Compartimenten</td>
+<td><a href='/?python#tutorial-values'>List using Tutorial Values </a></td>
+<td>This will show the Compartimenten.</td>
+</tr>
+<tr>
+<td>Parameters</td>
+<td><a href='/?python#tutorial-values'>List using Tutorial Values </a></td>
+<td>This will show the Parameters.</td>
+</tr>
+<tr>
+<td>Meetapparaten</td>
+<td><a href='/?python#tutorial-values'>List using Tutorial Values </a></td>
+<td>This list Meetapparaten that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Locatie</td>
+<td><a href='/?python#tutorial-locations'>List using Tutorial locations </a></td>
+<td>This will show the locations with and without data.</td>
+</tr>
+<tr>
+<td>Periode</td>
+<td>0000-00-00T00:00:00.000+01:00</td>
+<td>Time in the format</td>
+</tr>
+</tbody></table>
+<h2 id='ophalenlaatstewaarnemingen'>OphalenLaatsteWaarnemingen</h2><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">check</span> <span class="n">JSON</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"AquoPlusWaarnemingMetadataLijst"</span><span class="p">:[{</span><span class="s2">"AquoMetadata"</span><span class="p">:{</span><span class="s2">"Compartiment"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"OW"</span><span class="p">},</span><span class="s2">"Eenheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"cm"</span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Grootheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"H1/3"</span><span class="p">}}}],</span><span class="w">
+    </span><span class="s2">"LocatieLijst"</span><span class="p">:[{</span><span class="s2">"X"</span><span class="p">:</span><span class="mf">518882.333320247</span><span class="p">,</span><span class="s2">"Y"</span><span class="p">:</span><span class="mf">5760829.11729589</span><span class="p">,</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"EURPFM"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code><span class="o">{</span><span class="s2">"WaarnemingenLijst"</span>:[
+<span class="o">{</span><span class="s2">"Locatie"</span>:<span class="o">{</span><span class="s2">"Locatie_MessageID"</span>:78411364,<span class="s2">"Coordinatenstelsel"</span>:<span class="s2">"25831"</span>,<span class="s2">"X"</span>:518882.333320247,<span class="s2">"Y"</span>:5760829.11729589,<span class="s2">"Naam"</span>:<span class="s2">"Euro platform"</span>,<span class="s2">"Code"</span>:<span class="s2">"EURPFM"</span><span class="o">}</span>,
+<span class="s2">"MetingenLijst"</span>:[<span class="o">{</span><span class="s2">"Tijdstip"</span>:<span class="s2">"2012-01-31T23:50:00.000+01:00"</span>,
+<span class="s2">"Meetwaarde"</span>:<span class="o">{</span><span class="s2">"Waarde_Numeriek"</span>:230.0<span class="o">}</span>,
+<span class="s2">"WaarnemingMetadata"</span>:<span class="o">{</span><span class="s2">"StatuswaardeLijst"</span>:[<span class="s2">"Ongecontroleerd"</span><span class="o">]</span>,
+<span class="s2">"BemonsteringshoogteLijst"</span>:[<span class="s2">"-999999999"</span><span class="o">]</span>,
+<span class="s2">"ReferentievlakLijst"</span>:[<span class="s2">"NVT"</span><span class="o">]</span>,<span class="s2">"OpdrachtgevendeInstantieLijst"</span>:[<span class="s2">"RIKZMON_GOLVEN"</span><span class="o">]</span>,
+<span class="s2">"KwaliteitswaardecodeLijst"</span>:[<span class="s2">"00"</span><span class="o">]}}]</span>,
+<span class="s2">"AquoMetadata"</span>:<span class="o">{</span>
+<span class="s2">"AquoMetadata_MessageID"</span>:86395137,
+<span class="s2">"Parameter_Wat_Omschrijving"</span>:<span class="s2">"Gemiddelde golfhoogte uithoogste 1/3 deel van de golven Oppervlaktewater cm"</span>,
+<span class="s2">"BemonsteringsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"BemonsteringsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"BemonsteringsSoort"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"01"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Rechtstreekse meting"</span><span class="o">}</span>,
+<span class="s2">"BioTaxon"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"NVT"</span><span class="o">}</span>,
+<span class="s2">"BioTaxon_Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"NVT"</span><span class="o">}</span>,
+<span class="s2">"Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"OW"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Oppervlaktewater"</span><span class="o">}</span>,
+<span class="s2">"Eenheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"cm"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"centimeter"</span><span class="o">}</span>,
+<span class="s2">"Grootheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"H1/3"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Gemiddelde golfhoogte uit hoogste 1/3 deel van de golven"</span><span class="o">}</span>,
+<span class="s2">"Hoedanigheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waardeis niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"MeetApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"109"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Radar"</span><span class="o">}</span>,
+<span class="s2">"MonsterBewerkingsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"Orgaan"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"Parameter"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"PlaatsBepalingsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"Typering"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"WaardeBepalingstechniek"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving
+"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"WaardeBepalingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"other:F046"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Freq/tijd analyse energie en richtingen, methode CIC/GLFPAR"</span><span class="o">}</span>,
+<span class="s2">"WaardeBewerkingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}}}</span>,
+<span class="o">{</span><span class="s2">"Locatie"</span>:<span class="o">{</span><span class="s2">"Locatie_MessageID"</span>:78411364,<span class="s2">"Coordinatenstelsel"</span>:<span class="s2">"25831"</span>,<span class="s2">"X"</span>:518882.333320247,<span class="s2">"Y"</span>:5760829.11729589,<span class="s2">"Naam"</span>:<span class="s2">"Euro platform"</span>,<span class="s2">"Code"</span>:<span class="s2">"EURPFM"</span><span class="o">}</span>,
+<span class="s2">"MetingenLijst"</span>:[<span class="o">{</span><span class="s2">"Tijdstip"</span>:<span class="s2">"2012-01-31T23:50:00.000+01:00"</span>,
+<span class="s2">"Meetwaarde"</span>:<span class="o">{</span><span class="s2">"Waarde_Numeriek"</span>:220.0<span class="o">}</span>,
+<span class="s2">"WaarnemingMetadata"</span>:<span class="o">{</span>
+<span class="s2">"StatuswaardeLijst"</span>:[<span class="s2">"Ongecontroleerd"</span><span class="o">]</span>,
+<span class="s2">"BemonsteringshoogteLijst"</span>:[<span class="s2">"-999999999"</span><span class="o">]</span>,
+<span class="s2">"ReferentievlakLijst"</span>:[<span class="s2">"NVT"</span><span class="o">]</span>,
+<span class="s2">"OpdrachtgevendeInstantieLijst"</span>:[<span class="s2">"RIKZMON_GOLVEN"</span><span class="o">]</span>,
+<span class="s2">"KwaliteitswaardecodeLijst"</span>:[<span class="s2">"00"</span><span class="o">]}}]</span>,
+<span class="s2">"AquoMetadata"</span>:<span class="o">{</span>
+<span class="s2">"AquoMetadata_MessageID"</span>:83052418,
+<span class="s2">"Parameter_Wat_Omschrijving"</span>:<span class="s2">"Gemiddelde golfhoogte uit hoogste 1/3 deel van de golven Oppervlaktewater cm"</span>,
+<span class="s2">"BemonsteringsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"BemonsteringsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"BemonsteringsSoort"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"01"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Rechtstreekse meting"</span><span class="o">}</span>,
+<span class="s2">"BioTaxon"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"NVT"</span><span class="o">}</span>,
+<span class="s2">"BioTaxon_Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"NVT"</span><span class="o">}</span>,
+<span class="s2">"Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"OW"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Oppervlaktewater"</span><span class="o">}</span>,
+<span class="s2">"Eenheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"cm"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"centimeter"</span><span class="o">}</span>,
+<span class="s2">"Grootheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"H1/3"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Gemiddelde golfhoogte uit hoogste 1/3 deel van de golven"</span><span class="o">}</span>,
+<span class="s2">"Hoedanigheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waardeis niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"MeetApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"108"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Golfmeetboei"</span><span class="o">}</span>,
+<span class="s2">"MonsterBewerkingsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"Orgaan"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"Parameter"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"PlaatsBepalingsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"Typering"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"WaardeBepalingstechniek"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving
+</span></code></pre>
+<p>The following is a sample request for retrieving the last observation that is requested with the
+specified Aquometadata, Locaties and Waarnemingen parameters.</p>
+
+<table><thead>
+<tr>
+<th>Methode</th>
+<th>Content-Type</th>
+<th>URL</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>POST</td>
+<td>application/json</td>
+<td>https://waterwebservices.rijkswaterstaat.nl/ONLINEWAARNEMINGENSERVICES_DBO/OphalenLaatsteWaarnemingen</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Compartimenten</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Compartimenten that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Eenheden</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Eenheden that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Grootheden</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Grootheden that can be used in the webservices</td>
+</tr>
+<tr>
+<td>LocatieLijst</td>
+<td><a href='/?python#tutorial-locations'>List using Tutorial locations </a></td>
+<td>This will show the locations with and without data.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+with the Attribute LocatieLijst it's possible to give multiple locations within 1 request 
+</aside>
+<h2 id='checkwaarnemingenaanwezig'>CheckWaarnemingenAanwezig</h2><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">check</span> <span class="n">JSON</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"AquoMetadataLijst"</span><span class="w"> </span><span class="p">:</span><span class="w">
+    </span><span class="p">[{</span><span class="s2">"Compartiment"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"OW"</span><span class="p">},</span><span class="s2">"Eenheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"cm"</span><span class="p">}}],</span><span class="w">
+    </span><span class="s2">"LocatieLijst"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="s2">"X"</span><span class="w"> </span><span class="p">:</span><span class="mf">518882.333320247</span><span class="p">,</span><span class="s2">"Y"</span><span class="w"> </span><span class="p">:</span><span class="mf">5760829.11729589</span><span class="p">,</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"EURPFM"</span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"Periode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"Begindatumtijd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-01-16T14:00:00.000+01:00"</span><span class="p">,</span><span class="s2">"Einddatumtijd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-01-16T16:00:00.000+01:00"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s2">"Succesvol"</span>:true,
+    <span class="s2">"WaarnemingenAanwezig"</span>:<span class="s2">"true"</span>
+    <span class="o">}</span>
+
+When there are no Values:
+<span class="o">{</span>
+    <span class="s2">"Succesvol"</span>:true,
+    <span class="s2">"WaarnemingenAanwezig"</span>:<span class="s2">"false"</span>
+<span class="o">}</span>
+
+
+</code></pre>
+<p>Below is a sample request for checking if there are observations for one
+certain period that meet the specified Aquometadata, Locaties and Waarnemingen parameters.</p>
+
+<table><thead>
+<tr>
+<th>Methode</th>
+<th>Content-Type</th>
+<th>URL</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>POST</td>
+<td>application/json</td>
+<td>https://waterwebservices.rijkswaterstaat.nl/ONLINEWAARNEMINGENSERVICES_DBO/CheckWaarnemingen</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Atrribute</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Compartimenten</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Compartimenten that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Eenheden</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Eenheden that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Periode</td>
+<td>0000-00-00T00:00:00.000+01:00</td>
+<td>Time in the format</td>
+</tr>
+<tr>
+<td>LocatieLijst</td>
+<td><a href='/?python#tutorial-locations'>List using Tutorial locations </a></td>
+<td>This will show the locations with and without data.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+with the Attribute LocatieLijst it's possible to give multiple locations within 1 request 
+</aside>
+<h2 id='ophalenaantalwaarnemingen'>OphalenAantalWaarnemingen</h2><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">Check</span> <span class="n">JSON</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"AquoMetadataLijst"</span><span class="w"> </span><span class="p">:</span><span class="w">
+    </span><span class="p">[{</span><span class="s2">"Compartiment"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"OW"</span><span class="p">},</span><span class="s2">"Eenheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"cm"</span><span class="p">}}],</span><span class="w">
+    </span><span class="s2">"Groeperingsperiode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Week"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"LocatieLijst"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="s2">"X"</span><span class="w"> </span><span class="p">:</span><span class="mf">518882.333320247</span><span class="p">,</span><span class="s2">"Y"</span><span class="w"> </span><span class="p">:</span><span class="mf">5760829.11729589</span><span class="p">,</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"EURPFM"</span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"Periode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"Begindatumtijd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-01-16T14:00:00.000+01:00"</span><span class="p">,</span><span class="s2">"Einddatumtijd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-01-16T16:00:00.000+01:00"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code><span class="o">{</span><span class="s2">"AantalWaarnemingenPerPeriodeLijst"</span>:[
+<span class="o">{</span><span class="s2">"AquoMetadata"</span>:<span class="o">{</span><span class="s2">"AquoMetadata_MessageID"</span>:30064212,
+<span class="s2">"Parameter_Wat_Omschrijving"</span>:<span class="s2">"Significante golfhoogte uitenergiespectrum van 30-500 mHz Oppervlaktewater cm"</span>,
+<span class="s2">"BemonsteringsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"BemonsteringsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"BemonsteringsSoort"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"01"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Rechtstreekse meting"</span><span class="o">}</span>,
+<span class="s2">"BioTaxon"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"NVT"</span><span class="o">}</span>,
+<span class="s2">"BioTaxon_Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"NVT"</span><span class="o">}</span>,
+<span class="s2">"Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"OW"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Oppervlaktewater"</span><span class="o">}</span>,
+<span class="s2">"Eenheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"cm"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"centimeter"</span><span class="o">}</span>,
+<span class="s2">"Grootheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"Hm0"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Significantegolfhoogte uit energiespectrum van 30-500 mHz"</span><span class="o">}</span>,
+<span class="s2">"Hoedanigheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"MeetApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"108"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Golfmeetboei"</span><span class="o">}</span>,
+<span class="s2">"MonsterBewerkingsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"Orgaan"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"Parameter"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"PlaatsBepalingsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"Typering"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"WaardeBepalingstechniek"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving
+"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"WaardeBepalingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"other:F046"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Freq/tijd analyse energie en richtingen, methode CIC/GLFPAR"</span><span class="o">}</span>,
+<span class="s2">"WaardeBewerkingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}}</span>,
+<span class="s2">"Locatie"</span>:<span class="o">{</span><span class="s2">"Locatie_MessageID"</span>:78411364,<span class="s2">"Coordinatenstelsel"</span>:<span class="s2">"25831"</span>,<span class="s2">"X"</span>:518882.333320247,<span class="s2">"Y"</span>:5760829.11729589,<span class="s2">"Naam"</span>:<span class="s2">"Euro platform"</span>,<span class="s2">"Code"</span>:<span class="s2">"EURPFM"</span><span class="o">}</span>,
+<span class="s2">"AantalMetingenPerPeriodeLijst"</span>:[<span class="o">{</span><span class="s2">"Groeperingsperiode"</span>:<span class="o">{</span><span class="s2">"Jaarnummer"</span>:2012,<span class="s2">"Week"</span>:3<span class="o">}</span>,<span class="s2">"AantalMetingen"</span>:21<span class="o">}]</span>
+<span class="o">}</span>,
+</code></pre>
+<p>The following is an example request for retrieving the number of observations about a certain one
+period that met the specified Aquometadata, Locaties and Waarnemingen parameters, grouped
+over a certain grouping period.</p>
+
+<aside class="notice">
+This web service is not used yet and  performance issues are known.
+</aside>
+
+<table><thead>
+<tr>
+<th>Methode</th>
+<th>Content-Type</th>
+<th>URL</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>POST</td>
+<td>application/json</td>
+<td>https://waterwebservices.rijkswaterstaat.nl/ONLINEWAARNEMINGENSERVICES_DBO/OphalenAantalWaarnemingen</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Compartimenten</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Compartimenten that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Eenheden</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Eenheden that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Periode</td>
+<td>0000-00-00T00:00:00.000+01:00</td>
+<td>Time in the format</td>
+</tr>
+<tr>
+<td>LocatieLijst</td>
+<td><a href='/?python#tutorial-locations'>List using Tutorial locations </a></td>
+<td>This will show the locations with and without data.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+with the Attribute LocatieLijst it's possible to give multiple locations within 1 request.
+</aside>
+<h1 id='bulkwaarnemingservice'>BulkWaarnemingService</h1>
+<p>The BulkWaarnemingenService has one function:</p>
+
+<table><thead>
+<tr>
+<th>Function</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>AanvragenBulkWaarnemingen</td>
+</tr>
+</tbody></table>
+<h2 id='aanvragenbulkwaarnemingen'>AanvragenBulkWaarnemingen</h2><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">Check</span> <span class="n">JSON</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"Zoekvraag"</span><span class="p">:{</span><span class="s2">"AquoMetadataLijst"</span><span class="w"> </span><span class="p">:</span><span class="w">
+</span><span class="p">[{</span><span class="s2">"Grootheid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"Code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"H1/3"</span><span class="p">},</span><span class="s2">"Eenheid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"Code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"cm"</span><span class="p">}},{</span><span class="s2">"Compartiment"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="w"> </span><span class="p">:</span><span class="s2">"OW"</span><span class="p">},</span><span class="w">
+</span><span class="s2">"Eenheid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"Code"</span><span class="w"> </span><span class="p">:</span><span class="s2">"%"</span><span class="p">},</span><span class="s2">"Grootheid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"Code"</span><span class="w"> </span><span class="p">:</span><span class="s2">"VERDGGD"</span><span class="p">},</span><span class="s2">"Parameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"Code"</span><span class="w"> </span><span class="p">:</span><span class="s2">"O2"</span><span class="p">}},</span><span class="w">
+</span><span class="p">{</span><span class="s2">"Compartiment"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="w"> </span><span class="p">:</span><span class="s2">"OW"</span><span class="p">},</span><span class="s2">"Eenheid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"Code"</span><span class="w"> </span><span class="p">:</span><span class="s2">"mg/l"</span><span class="p">},</span><span class="s2">"Parameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"Code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"O2"</span><span class="p">}}],</span><span class="s2">"LocatieLijst"</span><span class="p">:[{</span><span class="s2">"X"</span><span class="p">:</span><span class="mf">742469.913149676</span><span class="p">,</span><span class="s2">"Y"</span><span class="p">:</span><span class="mf">5940708.14824459</span><span class="p">,</span><span class="s2">"Code"</span><span class="w"> </span><span class="p">:</span><span class="s2">"HUIBGOT"</span><span class="p">},{</span><span class="s2">"X"</span><span class="p">:</span><span class="mf">595875.376191307</span><span class="p">,</span><span class="s2">"Y"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">5790952.82210343</span><span class="p">,</span><span class="s2">"Code"</span><span class="w"> </span><span class="p">:</span><span class="s2">"NOORDWK2"</span><span class="p">},{</span><span class="s2">"X"</span><span class="p">:</span><span class="mf">571670.054611366</span><span class="p">,</span><span class="s2">"Y"</span><span class="p">:</span><span class="mf">5822651.05560318</span><span class="p">,</span><span class="s2">"Code"</span><span class="w"> </span><span class="p">:</span><span class="s2">"IJMDMNTSPS"</span><span class="p">}],</span><span class="s2">"Periode"</span><span class="p">:{</span><span class="s2">"Begindatumtijd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2009-01-01T00:00:00.000+01:00"</span><span class="p">,</span><span class="s2">"Einddatumtijd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2011-12-31T23:59:59.999+01:00"</span><span class="p">}},</span><span class="s2">"Email_succes"</span><span class="p">:{</span><span class="s2">"From"</span><span class="w"> </span><span class="p">:</span><span class="s2">"info@rws.nl"</span><span class="p">,</span><span class="s2">"To"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"aanvrager@rws.nl"</span><span class="p">,</span><span class="s2">"Subject"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Aanvraag bestandwaarnemingen"</span><span class="p">,</span><span class="s2">"Body"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Uw bestand met waarnemingen kunt u downloaden via {link_bestand}."</span><span class="p">},</span><span class="s2">"Email_fout"</span><span class="p">:{</span><span class="s2">"From"</span><span class="w"> </span><span class="p">:</span><span class="w">
+</span><span class="s2">"info@rws.nl"</span><span class="p">,</span><span class="s2">"To"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"aanvrager@rws.nl"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Subject"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Aanvraag niet gelukt"</span><span class="w"> </span><span class="p">,</span><span class="s2">"Body"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Uw aanvraag voor het bestand
+met waarnemingen is mislukt."</span><span class="p">},</span><span class="w"> </span><span class="s2">"Email_bevestiging"</span><span class="p">:{</span><span class="s2">"From"</span><span class="w"> </span><span class="p">:</span><span class="s2">"info@rws.nl"</span><span class="p">,</span><span class="s2">"To"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aanvrager@rws.nl"</span><span class="p">,</span><span class="s2">"Subject"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Bevestiging van aanvraag"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"Body"</span><span class="p">:</span><span class="s2">"Uw aanvraag is ontvangen. U ontvangt binnen 24 uur een e-mail met daarin een link voor hetdownloaden van de aanvraag."</span><span class="p">}}</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s2">"Aanvraagcode"</span>:<span class="s2">"20130207_3"</span>,
+    <span class="s2">"Datumtijdaanvraag"</span>:<span class="s2">"2013-02-07T10:17:22.814+01:00"</span>,
+    <span class="s2">"Zoekvraag"</span>:<span class="o">{</span>
+    <span class="s2">"AquoMetadataLijst"</span>:[
+        <span class="o">{</span><span class="s2">"AquoMetadata_MessageID"</span>:0,
+        <span class="s2">"Eenheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"cm"</span><span class="o">}</span>,
+        <span class="s2">"Grootheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"H1/3"</span><span class="o">}}</span>,
+        <span class="o">{</span><span class="s2">"AquoMetadata_MessageID"</span>:0,
+        <span class="s2">"Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"OW"</span><span class="o">}</span>,
+        <span class="s2">"Eenheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"%"</span><span class="o">}</span>,
+        <span class="s2">"Grootheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VERDGGD"</span><span class="o">}</span>,
+        <span class="s2">"Parameter"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"O2"</span><span class="o">}}</span>,
+        <span class="o">{</span><span class="s2">"AquoMetadata_MessageID"</span>:0,
+        <span class="s2">"Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"OW"</span><span class="o">}</span>,
+        <span class="s2">"Eenheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"mg/l"</span><span class="o">}</span>,
+        <span class="s2">"Parameter"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"O2"</span><span class="o">}}]</span>,
+        <span class="s2">"LocatieLijst"</span>:[
+            <span class="o">{</span><span class="s2">"Locatie_MessageID"</span>:0,<span class="s2">"X"</span>:742469.913149676,<span class="s2">"Y"</span>:5940708.14824459,<span class="s2">"Code"</span>:<span class="s2">"HUIBGOT"</span><span class="o">}</span>,
+            <span class="o">{</span><span class="s2">"Locatie_MessageID"</span>:0,<span class="s2">"X"</span>:595875.376191307,<span class="s2">"Y"</span>:5790952.82210343,<span class="s2">"Code"</span>:<span class="s2">"NOORDWK2"</span><span class="o">}</span>,
+            <span class="o">{</span><span class="s2">"Locatie_MessageID"</span>:0,<span class="s2">"X"</span>:571670.054611366,<span class="s2">"Y"</span>:5822651.05560318,<span class="s2">"Code"</span>:<span class="s2">"IJMDMNTSPS"</span><span class="o">}]</span>,
+            <span class="s2">"Periode"</span>:<span class="o">{</span><span class="s2">"Begindatumtijd"</span>:<span class="s2">"2009-01-01T00:00:00.000+01:00"</span>,<span class="s2">"Einddatumtijd"</span>:<span class="s2">"2011-12-31T23:59:59.999+01:00"</span><span class="o">}}</span>,
+            <span class="s2">"Email_succes"</span>:<span class="o">{</span><span class="s2">"From"</span>:<span class="s2">"info@rws.nl"</span>,<span class="s2">"To"</span>:<span class="s2">"aanvrager@rws.nl"</span>,<span class="s2">"Subject"</span>:<span class="s2">"Aanvraag bestandwaarnemingen"</span>,<span class="s2">"Body"</span>:<span class="s2">"Uw bestand met waarnemingen kunt u downloaden via {link_bestand}."</span><span class="o">}</span>,<span class="s2">"Email_fout"</span>:<span class="o">{</span><span class="s2">"From"</span>:<span class="s2">"info@rws.nl"</span>,<span class="s2">"To"</span>:<span class="s2">"aanvrager@rws.nl"</span>,<span class="s2">"Subject"</span>:<span class="s2">"Aanvraag niet gelukt"</span>,<span class="s2">"Body"</span>:<span class="s2">"Uw aanvraag voor het bestand met waarnemingen is mislukt."</span><span class="o">}</span>,<span class="s2">"Email_bevestiging"</span>:<span class="o">{</span><span class="s2">"From"</span> : <span class="s2">"info@rws.nl"</span>,<span class="s2">"To"</span>:
+            <span class="s2">"aanvrager@rws.nl"</span>, <span class="s2">"Subject"</span> : <span class="s2">"Bevestiging vanaanvraag"</span>,<span class="s2">"Body"</span>:<span class="s2">"Uw aanvraag is ontvangen. U ontvangt binnen 24 uur een e-mail met daarin een link voor het downloaden van de aanvraag."</span><span class="o">}</span>,
+        <span class="s2">"Succesvol"</span>:true<span class="o">}</span>
+</code></pre>
+<p>On the right there is a sample request for requesting a Bulk Waarnemingen. This service is different
+of the other web services. This has to do with the fact that there is no information about the observations
+returned immediately. The request is actually parked in the distribution web services database
+after which this data is collected at a later date. This data is based on
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+various settings are collected after which a compressed file is generated. When this is</p>
+<h1 id='file-is-created-the-applicant-is-informed-that-it-can-be-dodwnloaded-from-a-remote-location'>file is created the applicant is informed that it can be dodwnloaded from a remote location.</h1>
+<p>various settings that are collected after which a compressed file is generated. When this
+file is created the applicant is informed that it can be downloaded from a remote location.</p>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>65d24c24c031bd6f4074f9bc364ca626a3ec3844
+A valid e-mail address must be provided for this purpose. A valid e-mail address meets the
+next regulssar expression (within quotes):</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<p><strong>&quot;^ [a-zA-Z0-9 .<em>% -] + @ [a-zA-Z0-9 .</em>% -] + . [a-zA-Z] {2 , 4} $ &quot;.</strong> </p>
+
+<table><thead>
+<tr>
+<th>Methode</th>
+<th>Content-Type</th>
+<th>URL</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>POST</td>
+<td>application/json</td>
+<td>https://waterwebservices.rijkswaterstaat.nl/BulkWaarnemingenSERVICES_DBO/AanvragenBulkWaarnemingen</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Grootheden</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Grootheden that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Eenheden</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Eenheden that can be used in the webservices</td>
+</tr>
+<tr>
+<td>Compartimenten</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Compartimenten that can be used in the webservices</td>
+</tr>
+<tr>
+<td>LocatieLijst</td>
+<td><a href='/?python#tutorial-locations'>List using Tutorial locations </a></td>
+<td>This will show the locations with and without data.</td>
+</tr>
+</tbody></table>
+
+<aside class="warning">
+These values used in the request and response are not real and should not be used any requests or testing. 
+</aside>
+
+<aside class="notice">
+with the Attribute LocatieLijst it's possible to give multiple locations within 1 request 
+</aside>
+<h1 id='webfeatureservices'>WebFeatureServices</h1>
+<p>There are two available WFS features for the distribution layer:</p>
+
+<table><thead>
+<tr>
+<th>Function</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Locaties</td>
+</tr>
+<tr>
+<td>LocatiesMetLaatsteWaarneming</td>
+</tr>
+</tbody></table>
+<h2 id='locaties'>Locaties</h2><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">Check</span> <span class="n">JSON</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">&lt;wfs</span><span class="p">:</span><span class="err">GetFeature</span><span class="w">
+    </span><span class="err">xmlns</span><span class="p">:</span><span class="err">wfs=</span><span class="s2">"http://www.opengis.net/wfs"</span><span class="w">
+    </span><span class="err">service=</span><span class="s2">"WFS"</span><span class="w"> </span><span class="err">version=</span><span class="s2">"1.1.0"</span><span class="w">
+    </span><span class="err">outputFormat=</span><span class="s2">"GML3"</span><span class="w">
+    </span><span class="err">xmlns</span><span class="p">:</span><span class="err">xsi=</span><span class="s2">"http://www.w3.org/2001/XMLSchema-instance"</span><span class="w">
+    </span><span class="err">xsi</span><span class="p">:</span><span class="err">schemaLocation=</span><span class="s2">"http://www.opengis.net/wfshttp://schemas.opengis.net/wfs/1.1.0/wfs.xsd"</span><span class="err">&gt;</span><span class="w">
+    </span><span class="err">&lt;wfs</span><span class="p">:</span><span class="err">QueryTypeName=</span><span class="s2">"feature:locaties"</span><span class="w">
+    </span><span class="err">srsName=</span><span class="s2">"EPSG:25831"</span><span class="w">
+    </span><span class="err">xmlns</span><span class="p">:</span><span class="err">feature=</span><span class="s2">"http://mapserver.gis.umn.edu/mapserver"</span><span class="err">&gt;</span><span class="w">
+    </span><span class="err">&lt;/wfs</span><span class="p">:</span><span class="err">Query&gt;&lt;/wfs</span><span class="p">:</span><span class="err">GetFeature&gt;</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code>    &lt;?xml <span class="nv">version</span><span class="o">=</span><span class="s1">'1.0'</span> <span class="nv">encoding</span><span class="o">=</span><span class="s2">"ISO-8859-1"</span> ?&gt;
+    &lt;wfs:FeatureCollection xmlns:ms<span class="o">=</span><span class="s2">"http://mapserver.gis.umn.edu/mapserver"</span>
+    xmlns:gml<span class="o">=</span><span class="s2">"http://www.opengis.net/gml"</span>
+    xmlns:wfs<span class="o">=</span><span class="s2">"http://www.opengis.net/wfs"</span>
+    xmlns:ogc<span class="o">=</span><span class="s2">"http://www.opengis.net/ogc"</span>
+    xmlns:xsi<span class="o">=</span><span class="s2">"http://www.w3.org/2001/XMLSchema-instance"</span>
+    xsi:schemaLocation<span class="o">=</span><span class="s2">"http://mapserver.gis.umn.edu/mapserver
+    http://test.intranet.rijkswaterstaat.nl/services/geoservicesupdate/distributielaag_waterportaal?SERVICE=WFS&amp;amp;VERSION=1.1.0&amp;
+    amp;REQUEST=DescribeFeatureType&amp;amp;TYPENAME=feature:locaties&amp;amp;OUTPUTFORMAT=SFE_XMLSCHEMA http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.1.0/wfs.xsd"</span>&gt;
+    &lt;gml:boundedBy&gt;
+    &lt;gml:Envelope <span class="nv">srsName</span><span class="o">=</span><span class="s2">"EPSG:25831"</span>&gt;
+    &lt;gml:lowerCorner&gt;595875.376191 5790952.822103&lt;/gml:lowerCorner&gt;
+    &lt;gml:upperCorner&gt;595875.376191 5790952.822103&lt;/gml:upperCorner&gt;
+    &lt;/gml:Envelope&gt;
+    &lt;/gml:boundedBy&gt;
+    &lt;gml:featureMember&gt;
+    &lt;ms:locaties gml:id<span class="o">=</span><span class="s2">"locaties.195068918"</span>&gt;
+    &lt;gml:boundedBy&gt;
+    &lt;gml:Envelope <span class="nv">srsName</span><span class="o">=</span><span class="s2">"EPSG:25831"</span>&gt;
+    &lt;gml:lowerCorner&gt;595875.376191 5790952.822103&lt;/gml:lowerCorner&gt;
+    &lt;gml:upperCorner&gt;595875.376191 5790952.822103&lt;/gml:upperCorner&gt;
+    &lt;/gml:Envelope&gt;
+    &lt;/gml:boundedBy&gt;
+    &lt;ms:msGeometry&gt;
+    &lt;gml:Point <span class="nv">srsName</span><span class="o">=</span><span class="s2">"EPSG:25831"</span>&gt;
+    &lt;gml:pos&gt;595875.376191 5790952.822103&lt;/gml:pos&gt;
+    &lt;/gml:Point&gt;
+    &lt;/ms:msGeometry&gt;
+    &lt;ms:LOCATIE_MESSAGEID&gt;195068918&lt;/ms:LOCATIE_MESSAGEID&gt;
+    &lt;ms:NAAM&gt;Noordwijk 2 km uit de kust&lt;/ms:NAAM&gt;
+    &lt;ms:CODE&gt;NOORDWK2&lt;/ms:CODE&gt;
+    &lt;ms:OMSCHRIJVING&gt;&lt;/ms:OMSCHRIJVING&gt;
+    &lt;ms:BEMONSTERINGSAPPARAATCODE&gt;70&lt;/ms:BEMONSTERINGSAP
+    PARAATCODE&gt;
+    &lt;ms:BEMONSTERINGSMETHODECODE&gt;NVT&lt;/ms:BEMONSTERINGS
+    METHODECODE&gt;
+    &lt;ms:BEMONSTERINGSSOORTCODE&gt;02&lt;/ms:BEMONSTERINGSSOORTCODE&gt;
+    &lt;ms:BIOTAXONCODE&gt;NVT&lt;/ms:BIOTAXONCODE&gt;
+    &lt;ms:BIOTAXON_COMPARTIMENTCODE&gt;NVT&lt;/ms:BIOTAXON_COMPARTIMENTCODE&gt;
+    &lt;ms:COMPARTIMENTCODE&gt;OW&lt;/ms:COMPARTIMENTCODE&gt;
+    &lt;ms:EENHEIDCODE&gt;mg/l&lt;/ms:EENHEIDCODE&gt;
+    &lt;ms:GROOTHEIDCODE&gt;NVT&lt;/ms:GROOTHEIDCODE&gt;
+    &lt;ms:HOEDANIGHEIDCODE&gt;NVT&lt;/ms:HOEDANIGHEIDCODE&gt;
+    &lt;ms:MEETAPPARAATCODE&gt;NVT&lt;/ms:MEETAPPARAATCODE&gt;
+    &lt;ms:MONSTERBEWERKINGSMETHODECODE&gt;NVT&lt;/ms:MONSTERBEWERKINGSMETHODECODE&gt;
+    &lt;ms:ORGAANCODE&gt;NVT&lt;/ms:ORGAANCODE&gt;
+    &lt;ms:PARAMETERCODE&gt;O2&lt;/ms:PARAMETERCODE&gt;
+    &lt;ms:PLAATSBEPALINGSAPPARAATCODE&gt;NVT&lt;/ms:PLAATSBEPALINGSAPPARAATCODE&gt;
+    &lt;ms:TYPERINGCODE&gt;NVT&lt;/ms:TYPERINGCODE&gt;
+    &lt;ms:WAARDEBEPALINGSTECHNIEKCODE&gt;NVT&lt;/ms:WAARDEBEPALINGSTECHNIEKCODE&gt;
+    &lt;ms:WAARDEBEPALINGSMETHODECODE&gt;ZINTUIGLIJK&lt;/ms:WAARDEBEPALINGSMETHODECODE&gt;
+    &lt;ms:WAARDEBEWERKINGSMETHODECODE&gt;NVT&lt;/ms:WAARDEBEWERKINGSMETHODECODE&gt;
+    &lt;/ms:locaties&gt;
+    &lt;/gml:featureMember&gt;
+    &lt;/wfs:FeatureCollection&gt;
+</code></pre>
+<p>On the right is a sample request for calling the Locations WFS. In the message body of
+the POST request you can build a filter to get the desired result.</p>
+
+<table><thead>
+<tr>
+<th>Methode</th>
+<th>Content-Type</th>
+<th>URL</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>POST</td>
+<td>application/json</td>
+<td>https://waterwebservices.rijkswaterstaat.nl/services/distributielaagWFS/distributielaag_dbo?SERVICE=WFS&amp;VERSION=1.1.0&amp;REQUEST=GetCapabilities</td>
+</tr>
+</tbody></table>
+<h2 id='locatiesmetlaatstewaarneming'>LocatiesMetLaatsteWaarneming</h2><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">Check</span> <span class="n">JSON</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="w">    </span><span class="err">&lt;wfs</span><span class="p">:</span><span class="err">GetFeature</span><span class="w">
+    </span><span class="err">xmlns</span><span class="p">:</span><span class="err">wfs=</span><span class="s2">"http://www.opengis.net/wfs"</span><span class="w">
+    </span><span class="err">service=</span><span class="s2">"WFS"</span><span class="w"> </span><span class="err">version=</span><span class="s2">"1.1.0"</span><span class="w">
+    </span><span class="err">outputFormat=</span><span class="s2">"GML3"</span><span class="w">
+    </span><span class="err">xmlns</span><span class="p">:</span><span class="err">xsi=</span><span class="s2">"http://www.w3.org/2001/XMLSchema-instance"</span><span class="w">
+    </span><span class="err">xsi</span><span class="p">:</span><span class="err">schemaLocation=</span><span class="s2">"http://www.opengis.net/wfshttp://schemas.opengis.net/wfs/1.1.0/wfs.xsd"</span><span class="err">&gt;&lt;wfs</span><span class="p">:</span><span class="err">Query</span><span class="w">
+    </span><span class="err">typeName=</span><span class="s2">"feature:locatiesmetlaatstewaarneming"</span><span class="w"> </span><span class="err">srsName=</span><span class="s2">"EPSG:25831"</span><span class="w">
+    </span><span class="err">xmlns</span><span class="p">:</span><span class="err">feature=</span><span class="s2">"http://mapserver.gis.umn.edu/mapserver"</span><span class="err">&gt;</span><span class="w">
+    </span><span class="err">&lt;/wfs</span><span class="p">:</span><span class="err">Query&gt;</span><span class="w">
+    </span><span class="err">&lt;/wfs</span><span class="p">:</span><span class="err">GetFeature&gt;</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code>    &lt;?xml <span class="nv">version</span><span class="o">=</span><span class="s1">'1.0'</span> <span class="nv">encoding</span><span class="o">=</span><span class="s2">"ISO-8859-1"</span> ?&gt;
+    &lt;wfs:FeatureCollection xmlns:ms<span class="o">=</span><span class="s2">"http://mapserver.gis.umn.edu/mapserver"</span>
+    xmlns:gml<span class="o">=</span><span class="s2">"http://www.opengis.net/gml"</span>
+    xmlns:wfs<span class="o">=</span><span class="s2">"http://www.opengis.net/wfs"</span>
+    xmlns:ogc<span class="o">=</span><span class="s2">"http://www.opengis.net/ogc"</span>
+    xmlns:xsi<span class="o">=</span><span class="s2">"http://www.w3.org/2001/XMLSchema-instance"</span>
+    xsi:schemaLocation<span class="o">=</span><span class="s2">"http://mapserver.gis.umn.edu/mapserverhttp://test.intranet.rijkswaterstaat.nl/services/geoservicesupdate/distributielaag_waterportaal?SERVICE=WFS&amp;amp;VERSION=1.1.0&amp;amp;REQUEST=DescribeFeatureType&amp;ampTYPENAME=feature:locatiesmetlaatstewaarneming&amp;amp;OUTPUTFORMAT=SFE_XMLSCHEMA
+    http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.1.0/wfs.xsd"</span>&gt;
+    &lt;gml:boundedBy&gt;
+    &lt;gml:Envelope <span class="nv">srsName</span><span class="o">=</span><span class="s2">"EPSG:25831"</span>&gt;
+    &lt;gml:lowerCorner&gt;518882.333320 5760829.117296&lt;/gml:lowerCorner&gt;
+    &lt;gml:upperCorner&gt;518882.333320 5760829.117296&lt;/gml:upperCorner&gt;
+    &lt;/gml:Envelope&gt;
+    &lt;/gml:boundedBy&gt;
+    &lt;gml:featureMember&gt;
+    &lt;ms:locatiesmetlaatstewaarneming
+    gml:id<span class="o">=</span><span class="s2">"locatiesmetlaatstewaarneming.195068918"</span>&gt;
+    &lt;gml:boundedBy&gt;
+    &lt;gml:Envelope <span class="nv">srsName</span><span class="o">=</span><span class="s2">"EPSG:25831"</span>&gt;
+    &lt;gml:lowerCorner&gt;518882.333320 5760829.117296&lt;/gml:lowerCorner&gt;
+    &lt;gml:upperCorner&gt;518882.333320 5760829.117296&lt;/gml:upperCorner&gt;
+    &lt;/gml:Envelope&gt;
+    &lt;/gml:boundedBy&gt;
+    &lt;ms:msGeometry&gt;
+    &lt;gml:Point <span class="nv">srsName</span><span class="o">=</span><span class="s2">"EPSG:25831"</span>&gt;
+    &lt;gml:pos&gt;518882.333320 5760829.117296&lt;/gml:pos&gt;
+    &lt;/gml:Point&gt;
+    &lt;/ms:msGeometry&gt;
+    &lt;ms:WAARNEMING_ID&gt;195068918&lt;/ms:WAARNEMING_ID&gt;
+    &lt;ms:NAAM&gt;Euro platform&lt;/ms:NAAM&gt;
+    &lt;ms:CODE&gt;EURPFM&lt;/ms:CODE&gt;
+    &lt;ms:OMSCHRIJVING&gt;&lt;/ms:OMSCHRIJVING&gt;
+    &lt;ms:STATUSWAARDE&gt;Ongecontroleerd&lt;/ms:STATUSWAARDE&gt;
+    &lt;ms:BEMONSTERINGSHOOGTE&gt;-100&lt;/ms:BEMONSTERINGSHOOGTE&gt;
+    &lt;ms:REFERENTIEVLAK&gt;NVT&lt;/ms:REFERENTIEVLAK&gt;
+    &lt;ms:OPDRACHTGEVENDE_INSTANTIE&gt;RIKZMON_GOLVEN&lt;/ms:OPDRACHTGEVENDE_INSTANTIE&gt;
+    &lt;ms:KWALITEITSWAARDE_CODE&gt;00&lt;/ms:KWALITEITSWAARDE_CODE&gt;
+    &lt;ms:WAARDE_LAATSTE_METING&gt;230&lt;/ms:WAARDE_LAATSTE_METING&gt;
+    &lt;ms:TIJDSTIP_LAATSTE_METING&gt;2013-01-31T23:50:00.000+01:00&lt;/ms:TIJDSTIP_LAATSTE_METING&gt;
+    &lt;ms:PARAMETER_WAT_OMSCHRIJVING&gt;Gemiddelde golfhoogte uithoogste 1/3 deel van de golven Oppervlaktewatercm&lt;/ms:PARAMETER_WAT_OMSCHRIJVING&gt;
+    &lt;ms:BEMONSTERINGSAPPARAATCODE&gt;NVT&lt;/ms:BEMONSTERINGSAPPARAATCODE&gt;
+    &lt;ms:BEMONSTERINGSMETHODECODE&gt;NVT&lt;/ms:BEMONSTERINGSMETHODECODE&gt;
+    &lt;ms:BEMONSTERINGSSOORTCODE&gt;01&lt;/ms:BEMONSTERINGSSOORTCODE&gt;
+    &lt;ms:BIOTAXONCODE&gt;NVT&lt;/ms:BIOTAXONCODE&gt;
+    &lt;ms:BIOTAXON_COMPARTIMENTCODE&gt;NVT&lt;/ms:BIOTAXON_COMPARTIMENTCODE&gt;
+    &lt;ms:COMPARTIMENTCODE&gt;OW&lt;/ms:COMPARTIMENTCODE&gt;
+    &lt;ms:EENHEIDCODE&gt;cm&lt;/ms:EENHEIDCODE&gt;
+    &lt;ms:GROOTHEIDCODE&gt;H1/3&lt;/ms:GROOTHEIDCODE&gt;
+    &lt;ms:HOEDANIGHEIDCODE&gt;NVT&lt;/ms:HOEDANIGHEIDCODE&gt;
+    &lt;ms:MEETAPPARAATCODE&gt;109&lt;/ms:MEETAPPARAATCODE&gt;
+    &lt;ms:MONSTERBEWERKINGSMETHODECODE&gt;NVT&lt;/ms:MONSTERBEWERKINGSMETHODECODE&gt;
+    &lt;ms:ORGAANCODE&gt;NVT&lt;/ms:ORGAANCODE&gt;
+    &lt;ms:PARAMETERCODE&gt;NVT&lt;/ms:PARAMETERCODE&gt;
+    &lt;ms:PLAATSBEPALINGSAPPARAATCODE&gt;NVT&lt;/ms:PLAATSBEPALINGSAPPARAATCODE&gt;
+    &lt;ms:TYPERINGCODE&gt;NVT&lt;/ms:TYPERINGCODE&gt;
+    &lt;ms:WAARDEBEPALINGSTECHNIEKCODE&gt;NVT&lt;/ms:WAARDEBEPALINGSTECHNIEKCODE&gt;
+    &lt;ms:WAARDEBEPALINGSMETHODECODE&gt;other:F046&lt;/ms:WAARDEBEPALINGSMETHODECODE&gt;
+    &lt;ms:WAARDEBEWERKINGSMETHODECODE&gt;NVT&lt;/ms:WAARDEBEWERKINGSMETHODECODE&gt;
+    &lt;/ms:locatiesmetlaatstewaarneming&gt;
+    &lt;/gml:featureMember&gt;
+    &lt;/wfs:FeatureCollection&gt;
+</code></pre>
+<p>The following is a sample request for calling the Locations with the LocatiesMetLaatsteWaarneming WFS. In
+the message body of the POST request you can build a filter in order to obtain the desired result.</p>
+
+<table><thead>
+<tr>
+<th>Methode</th>
+<th>Content-Type</th>
+<th>URL</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>POST</td>
+<td>application/json</td>
+<td>https://waterwebservices.rijkswaterstaat.nl/services/distributielaagWFS/distributielaag_dbo?SERVICE=WFS&amp;VERSION=1.1.0&amp;REQUEST=GetFeature&amp;TYPENAME=locatiesmetlaatstewaarneming&amp;Maxfeatures=50</td>
+</tr>
+</tbody></table>
+<h1 id='version'>Version</h1>
+<p>Below de modules that are used in the tutorials. 
+If you want to use the tutorials you need these modules.</p>
+
+<aside class="notice">
+You can use newer or older versions of the modules but this is not tested in the code.
+</aside>
+<h2 id='python'>Python</h2><pre class="highlight python tab-python"><code><span class="c"># Nothing to show</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w">
+</span></code></pre><pre class="highlight shell tab-shell"><code><span class="c"># Nothing to show</span>
+
+</code></pre>
+<table><thead>
+<tr>
+<th>Module</th>
+<th>Description</th>
+<th>Version</th>
+<th>Link</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>requests</td>
+<td>Requests is an elegant and simple HTTP library for Python</td>
+<td>2.20.0</td>
+<td><a href='http://docs.python-requests.org/en/master/user/quickstart/'>link to documentation </a></td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>JSON (JavaScript Object Notation), specified by RFC 7159</td>
+<td>3.6.0</td>
+<td><a href='https://docs.python.org/3/library/json.html'>link to documentation </a></td>
+</tr>
+<tr>
+<td>NumPy</td>
+<td>NumPy is the fundamental package for scientific computing with Python</td>
+<td></td>
+<td><a href='http://www.numpy.org/'>link to documentation </a></td>
+</tr>
+<tr>
+<td>pandas</td>
+<td>pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language</td>
+<td>0.23.4</td>
+<td><a href='https://pandas.pydata.org/'>link to documentation </a></td>
+</tr>
+<tr>
+<td>datetime</td>
+<td>The datetime module supplies classes for manipulating dates and times in both simple and complex ways.</td>
+<td>3.7</td>
+<td><a href='https://docs.python.org/3/library/datetime.html'>link to documentation </a></td>
+</tr>
+<tr>
+<td>Pytz</td>
+<td>pytz brings the Olson tz database into Python.</td>
+<td>2018.5</td>
+<td><a href='https://pypi.org/project/pytz/'>link to documentation </a></td>
+</tr>
+<tr>
+<td>objectpath</td>
+<td>ObjectPath is a query language similar to XPath or JSONPath, but much more powerful thanks to embedded arithmetic calculations, comparison mechanisms and built-in functions.</td>
+<td>0.5</td>
+<td><a href='https://pypi.org/project/objectpath/'>link to documentation </a></td>
+</tr>
+</tbody></table>
+<h1 id='errors'>Errors</h1>
+<p>The Webservices uses the following error codes:</p>
+
+<p>COMING SOON !</p>
+
+<!-- 
+Error Code | Meaning
+---------- | -------
+400 | Bad Request -- Your request is invalid.
+401 | Unauthorized -- Your API key is wrong.
+403 | Forbidden -- The kitten requested is hidden for administrators only.
+404 | Not Found -- The specified kitten could not be found.
+405 | Method Not Allowed -- You tried to access a kitten with an invalid method.
+406 | Not Acceptable -- You requested a format that isn't json.
+410 | Gone -- The kitten requested has been removed from our servers.
+418 | I'm a teapot.
+429 | Too Many Requests -- You're requesting too many kittens! Slow down!
+500 | Internal Server Error -- We had a problem with our server. Try again later.
+503 | Service Unavailable -- We're temporarily offline for maintenance. Please try again later. -->
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="json">JSON Request</a>
+                <a href="#" data-language-name="shell">JSON Response</a>
+                <a href="#" data-language-name="python">Python</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
