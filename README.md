@@ -25,8 +25,8 @@ equates to better performance and fewer compute cycles. This is one reason why w
 information transfer on mobile devices and tablets; as opposed to on desktops and services, 
 where they have restricted processing environments.
 Conversely, web services facilitate interactions between two systems, 
-and almost always depend on an XML-RPC-like interface to communicate with each other. 
-SOAP, the successor to XML-RPC, defines the XML-based exchange mentioned above and is more bound to a client/server architecture.
+and almost always depend on an XML like interface to communicate with each other. 
+
 In terms of what web APIs and web services have in common, both are essentially a means to an end 
 and the same problems can be solved by both. And both can be configured to operate over a network or within a machine.
 But the approaches of each come with their own pros and cons.  
