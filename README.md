@@ -9,7 +9,7 @@ Beside a OGC compliant webservice, a set of Rest API services can be found to ge
 - Actual measurements
 - Predictive measurement
 - Historical measurements
-Please be aware that data is originaly collected and stored in different systems and therefor can have different code based end-points. Esspacialy historical and actual en predictive measurements.
+Please note that all data is originaly collected from and stored in different systems and therefor can have different code based end-points. Esspacialy historical and actual en predictive measurements.
 <br>
 <br>
 Please be aware of the discaimer (in Dutch) using the data and Web API https://www.rijkswaterstaat.nl/footer/index.aspx.
