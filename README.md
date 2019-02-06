@@ -9,6 +9,7 @@ Beside a OGC compliant webservice, a set of Rest API services can be found to ge
 - Actual measurements
 - Predictive measurement
 - Historical measurements
+Please be aware that data is originaly collected and stored in different systems and therefor can have different code based end-points. Esspacialy historical and actual en predictive measurements.
 <br>
 As you know..<br>
 Web APIs serve as a means of communication between consumers and a provider. Both support XML-based data payloads,
