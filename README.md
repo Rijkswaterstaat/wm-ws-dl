@@ -3,8 +3,8 @@ Rijkswaterstaat policy is to give access to as much data as possible, both techn
 Data from the waterquantity and waterquality network are stored and can be accessed by a GUI www.waterinfo.rws.nl.
 
 Beside the GUI, data can be accessed by programmers.
-To get acces to the data by a variety of Web APIs which are described in Slate.
-Please use the Slate documentation which is deployed on this git to get any further information to communicate with the Web API.
+To get acces to the data Rijkswaterstaat provides a variety of Web APIs described in Slate.
+Please use the Slate documentation deployed on this git to get any further information to communicate with the Web API.
 Beside a OGC compliant webservice, a set of Rest API services can be found to get access to;
 - Actual measurements
 - Predictive measurement
