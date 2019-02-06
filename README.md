@@ -11,8 +11,9 @@ Beside a OGC compliant webservice, a set of Rest API services can be found to ge
 - Historical measurements
 Please be aware that data is originaly collected and stored in different systems and therefor can have different code based end-points. Esspacialy historical and actual en predictive measurements.
 <br>
-More information about policy, licence and servicelevels and restrictions will be linked soon.
+<br>
 Please be aware of the discaimer (in Dutch) using the data and Web API https://www.rijkswaterstaat.nl/footer/index.aspx.
+<br>
 <br>
 As you know..<br>
 Web APIs serve as a means of communication between consumers and a provider. Both support XML-based data payloads,
