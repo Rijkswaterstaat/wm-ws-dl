@@ -1,6 +1,6 @@
 # wm-ws-dl
 Rijkswaterstaat (RWS) policy is to give access to as much data as possible, both technicaly and juridicaly.<br>
-Data from the waterquantity and waterquality network are stored and can be accessed by a GUI www.waterinfo.rws.nl.
+Data from the waterquantity and waterquality network are stored and can be accessed by a GUI https://waterinfo.rws.nl.
 
 Beside the GUI, measurement data available at the data distributielaag (wm-ds-dl) can be accessed by programmers.
 To get acces to the data RWS provides a variety of Web APIs described in Slate.
