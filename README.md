@@ -12,7 +12,7 @@ Beside a OGC compliant webservice, a set of Rest API services can be found to ge
 Please note that all data is originaly collected from and stored in different systems and therefor can have different code based end-points. Esspacialy historical and actual en predictive measurements.
 <br>
 Please be aware of the discaimer (in Dutch) using the data and Web API https://www.rijkswaterstaat.nl/footer/index.aspx.
-Information with respect to your privacy ( in English) can be found on this link thttps://www.rijkswaterstaat.nl/english/disclaimer/privacy-statement/index.aspx
+Information with respect to your privacy ( in English) can be found on this link https://www.rijkswaterstaat.nl/english/disclaimer/privacy-statement/index.aspx
 <br>
 <br>
 As you know..<br>
