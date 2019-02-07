@@ -2,7 +2,7 @@
 Rijkswaterstaat (RWS) policy is to give access to as much data as possible, both technicaly and juridicaly.<br>
 Data from the waterquantity (timeseries, physical parameters like waterlevel) and waterquality (time series and samples, chemical and ecological parameters) network are stored and can be accessed by a GUI https://waterinfo.rws.nl.
 
-Beside the GUI, measurement data is available at the data distributielaag (wm-ds-dl) can be accessed by programmers.
+Beside the GUI, measurement data is available at the data distributielaag (wm-ds-dl) and can directly be accessed by programmers.
 To get acces to the data RWS provides a variety of Web APIs described in Slate.
 Please use the Slate documentation deployed on this git to get any further information to communicate with the Web API.
 Beside a OGC compliant webservice, a set of Rest API services can be found to get access to;
