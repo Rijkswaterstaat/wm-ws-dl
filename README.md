@@ -8,8 +8,8 @@ Please use the Slate documentation deployed on this 'git' to get any further inf
 Beside a OGC compliant webservice, a set of Rest API services can be found to get access to;
 - Actual measurements
 - Forecast data
-- Historical measurements
-Please note that all data is originaly collected from and stored in different systems and therefor can have different code based end-points. Especially historical, actual and predictive measurements.
+- Historical measurements<br>
+Please note that all data is originaly collected from and stored in different systems and therefor can have different code based end-points. Especially historical, actual measurements and forecasting data.
 <br>
 Please be aware of the discaimer (in Dutch) using the data and Web API [https://www.rijkswaterstaat.nl/footer/index.aspx].
 Information with respect to your privacy (in English) can be found on this link [https://www.rijkswaterstaat.nl/english/disclaimer/privacy-statement/index.aspx].
