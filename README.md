@@ -1,4 +1,5 @@
 # wm-ws-dl
+### Web API waterdata
 Rijkswaterstaat (RWS) policy is to give access to as much data as possible, both technicaly and juridicaly.<br>
 Data from the water quantity netwerk (timeseries, physical parameters like waterlevel) and water quality network (time series and samples, chemical and ecological parameters) network are stored and can be accessed by a GUI [https://waterinfo.rws.nl].
 
@@ -10,11 +11,12 @@ Beside a OGC compliant webservice, a set of Rest API services can be found to ge
 - Forecast data
 - Historical measurements<br>
 Please note that data sources of the different networks can have different code based end-points. Especially historical, actual measurements and forecasting data.
-<br>
+<br></br>
+## Disclaimer<br>
 Please be aware of the discaimer (in Dutch) using the data and Web API [https://www.rijkswaterstaat.nl/footer/index.aspx].
 Information with respect to your privacy (in English) can be found on this link [https://www.rijkswaterstaat.nl/english/disclaimer/privacy-statement/index.aspx].
-<br>
-<br>
-<br>
+<br></br>
+<br></br>
+<br></br>
 “You can have data without information, but you cannot have information without data.” 
 – Daniel Keys Moran, an American computer programmer and science fiction writer.
