@@ -13,8 +13,8 @@ Please note that all data is originaly collected from and stored in different sy
 <br>
 Please be aware of the discaimer (in Dutch) using the data and Web API https://www.rijkswaterstaat.nl/footer/index.aspx.
 Information with respect to your privacy (in English) can be found on this link https://www.rijkswaterstaat.nl/english/disclaimer/privacy-statement/index.aspx
-<br>
-<br>
+
+
 As you know..<br>
 Web APIs serve as a means of communication between consumers and a provider. Both support XML-based data payloads,
 but JSON is the more common payload type for web APIs. When comparing web services to web APIs, 
