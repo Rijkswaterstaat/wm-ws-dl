@@ -7,7 +7,7 @@ To get acces to the data RWS provides a variety of Web APIs described in Slate.
 Please use the Slate documentation deployed on this 'git' to get any further information to communicate with the Web API.
 Beside a OGC compliant webservice, a set of Rest API services can be found to get access to;
 - Actual measurements
-- Predictive measurement
+- Forecast data
 - Historical measurements
 Please note that all data is originaly collected from and stored in different systems and therefor can have different code based end-points. Especially historical, actual and predictive measurements.
 <br>
