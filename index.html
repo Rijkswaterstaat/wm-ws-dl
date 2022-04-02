@@ -1,12 +1,10 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Webservices</title>
-
     <style>
       .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
@@ -198,9 +196,8 @@
     </style>
     <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all.js"></script>
+     <script src="javascripts/all.js"></script>
   </head>
-
   <body class="index" data-languages="[&quot;json&quot;,&quot;shell&quot;,&quot;python&quot;]">
     <a href="#" id="nav-button">
       <span>
@@ -342,10 +339,10 @@
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show
 </code></pre>
 <aside class="notice">
-Check the following languages  on the right  ------ >
+Check the following languages  on the right ——>
 </aside>
 
-<p>The system is intended to access/retrieve  data from the distributie laag through web services. the
+<p>The system is intended to access/retrieve data from the distributie laag through web services. The
 data is accessed through five web services (three HTTP JSON web services and two WFS
 web service):</p>
 
@@ -372,7 +369,6 @@ web service):</p>
 </tbody></table>
 
 <p><strong>Metadata Service</strong> </p>
-
 <p>The Metadata Service has one function:</p>
 
 <table><thead>
@@ -412,9 +408,7 @@ distributie laag. On the basis of the data in these lists, you can fill the requ
 </tbody></table>
 
 <p>With a request to the  <strong>Ophalenwaarnemingen service</strong> it&#39;s possible to get all observations with the right parameters. These parameters need to relate to <strong>Aquometadata</strong>, <strong>Locatie</strong> and <strong>Periode</strong> where de observations are done. A request to the <strong>OphalenLaasteWaarnemingenService</strong> will return the last obervation. The service <strong>OphalenLaatsteWaarnemingen</strong> returns observations per grouped specified grouping on period. The <strong>CheckWaarnemingenAanwezigService</strong> returns the observations from the distributie laag wich are those that comply with the parameters provided.</p>
-
 <p><strong>BulkWaarnemingenService</strong></p>
-
 <p>The BulkWaarnemingenService has one function:</p>
 
 <table><thead>
@@ -426,12 +420,10 @@ distributie laag. On the basis of the data in these lists, you can fill the requ
 <td>Aanvragen Bulk Waarnemingen</td>
 </tr>
 </tbody></table>
-
+        
 <p>With the <strong>AanvragenBulkWaarnemingen</strong> service an application can be made to a
 a server that can be downloaded from a Rijkswaterstaat server at a later time.</p>
-
 <p><strong>Web Feature Service</strong></p>
-
 <p>The Web Feature Service has two functions:</p>
 
 <table><thead>
@@ -494,7 +486,7 @@ make use of the Locatie, Aquometadata and Waarnemingen in the distributie laag.<
 <th>Hours</th>
 <th>Minutes</th>
 <th>Seconds</th>
-<th>Time zone</th>
+<th>Timezone</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -516,7 +508,7 @@ make use of the Locatie, Aquometadata and Waarnemingen in the distributie laag.<
 <table><thead>
 <tr>
 <th>Naam</th>
-<th>Link to Documentation</th>
+<th>Link to the documentation</th>
 <th>Version</th>
 </tr>
 </thead><tbody>
@@ -532,7 +524,7 @@ make use of the Locatie, Aquometadata and Waarnemingen in the distributie laag.<
 <table><thead>
 <tr>
 <th>Name</th>
-<th>Link to documentation</th>
+<th>Link to the documentation</th>
 <th>Version</th>
 </tr>
 </thead><tbody>
@@ -1620,7 +1612,6 @@ When there are no Values:
     <span class="s2">"WaarnemingenAanwezig"</span>:<span class="s2">"false"</span>
 <span class="o">}</span>
 
-
 </code></pre>
 <p>Below is a sample request for checking if there are observations for one
 certain period that meet the specified Aquometadata, Locaties and Waarnemingen parameters.</p>
@@ -1667,10 +1658,7 @@ certain period that meet the specified Aquometadata, Locaties and Waarnemingen p
 <td>This will show the locations with and without data.</td>
 </tr>
 </tbody></table>
-
-<aside class="notice">
-with the Attribute LocatieLijst it's possible to give multiple locations within 1 request 
-</aside>
+<aside class="notice">With the Attribute LocatieLijst it's possible to give multiple locations within 1 request.</aside>
 <h2 id='ophalenaantalwaarnemingen'>OphalenAantalWaarnemingen</h2><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">Check</span> <span class="n">JSON</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"AquoMetadataLijst"</span><span class="w"> </span><span class="p">:</span><span class="w">
     </span><span class="p">[{</span><span class="s2">"Compartiment"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"OW"</span><span class="p">},</span><span class="s2">"Eenheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"cm"</span><span class="p">}}],</span><span class="w">
@@ -1713,7 +1701,7 @@ period that met the specified Aquometadata, Locaties and Waarnemingen parameters
 over a certain grouping period.</p>
 
 <aside class="notice">
-This web service is not used yet and  performance issues are known.
+This web service is not used yet and performance issues are known.
 </aside>
 
 <table><thead>
@@ -2076,11 +2064,11 @@ the message body of the POST request you can build a filter in order to obtain t
 </tr>
 </tbody></table>
 <h1 id='version'>Version</h1>
-<p>Below de modules that are used in the tutorials. 
-If you want to use the tutorials you need these modules.</p>
+<p>Below the modules that are used in the tutorials. 
+If you want to use the tutorials, you need these modules.</p>
 
 <aside class="notice">
-You can use newer or older versions of the modules but this is not tested in the code.
+You can use newer or older versions of the modules, but this is not tested in the code.
 </aside>
 <h2 id='python'>Python</h2><pre class="highlight python tab-python"><code><span class="c"># Nothing to show</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w">
@@ -2099,64 +2087,65 @@ You can use newer or older versions of the modules but this is not tested in the
 <td>requests</td>
 <td>Requests is an elegant and simple HTTP library for Python</td>
 <td>2.20.0</td>
-<td><a href='http://docs.python-requests.org/en/master/user/quickstart/'>link to documentation </a></td>
+<td><a href='http://docs.python-requests.org/en/master/user/quickstart/'>Link to the documentation </a></td>
 </tr>
 <tr>
 <td>JSON</td>
 <td>JSON (JavaScript Object Notation), specified by RFC 7159</td>
 <td>3.6.0</td>
-<td><a href='https://docs.python.org/3/library/json.html'>link to documentation </a></td>
+<td><a href='https://docs.python.org/3/library/json.html'>Link to the documentation </a></td>
 </tr>
 <tr>
 <td>NumPy</td>
 <td>NumPy is the fundamental package for scientific computing with Python</td>
 <td></td>
-<td><a href='http://www.numpy.org/'>link to documentation </a></td>
+<td><a href='http://www.numpy.org/'>Link to the documentation </a></td>
 </tr>
 <tr>
-<td>pandas</td>
-<td>pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language</td>
+<td>Pandas</td>
+<td>Pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language</td>
 <td>0.23.4</td>
-<td><a href='https://pandas.pydata.org/'>link to documentation </a></td>
+<td><a href='https://pandas.pydata.org/'>Link to the documentation </a></td>
 </tr>
 <tr>
-<td>datetime</td>
+<td>Datetime</td>
 <td>The datetime module supplies classes for manipulating dates and times in both simple and complex ways.</td>
 <td>3.7</td>
-<td><a href='https://docs.python.org/3/library/datetime.html'>link to documentation </a></td>
+<td><a href='https://docs.python.org/3/library/datetime.html'>Link to the documentation </a></td>
 </tr>
 <tr>
 <td>Pytz</td>
-<td>pytz brings the Olson tz database into Python.</td>
+<td>Pytz brings the Olson tz database into Python.</td>
 <td>2018.5</td>
-<td><a href='https://pypi.org/project/pytz/'>link to documentation </a></td>
+<td><a href='https://pypi.org/project/pytz/'>link to the documentation </a></td>
 </tr>
 <tr>
 <td>objectpath</td>
 <td>ObjectPath is a query language similar to XPath or JSONPath, but much more powerful thanks to embedded arithmetic calculations, comparison mechanisms and built-in functions.</td>
 <td>0.5</td>
-<td><a href='https://pypi.org/project/objectpath/'>link to documentation </a></td>
+<td><a href='https://pypi.org/project/objectpath/'>Link to the documentation </a></td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
 <p>The Webservices uses the following error codes:</p>
 
-<p>COMING SOON !</p>
+<p>Coming soon..</p>
 
 <!-- 
 Error Code | Meaning
----------- | -------
-400 | Bad Request -- Your request is invalid.
-401 | Unauthorized -- Your API key is wrong.
-403 | Forbidden -- The kitten requested is hidden for administrators only.
-404 | Not Found -- The specified kitten could not be found.
-405 | Method Not Allowed -- You tried to access a kitten with an invalid method.
-406 | Not Acceptable -- You requested a format that isn't json.
-410 | Gone -- The kitten requested has been removed from our servers.
+ ————————— | ————————
+400 | Bad Request —— Your request is invalid.
+401 | Unauthorized —— Your API key is wrong.
+403 | Forbidden —— The kitten requested is hidden for administrators only.
+404 | Not Found —— The specified kitten could not be found.
+405 | Method Not Allowed —— You tried to access a kitten with an invalid method.
+406 | Not Acceptable —— You requested a format that isn't json.
+410 | Gone —— The kitten requested has been removed from our servers.
 418 | I'm a teapot.
-429 | Too Many Requests -- You're requesting too many kittens! Slow down!
-500 | Internal Server Error -- We had a problem with our server. Try again later.
-503 | Service Unavailable -- We're temporarily offline for maintenance. Please try again later. -->
+429 | Too Many Requests —— You're requesting too many kittens! Slow down!
+500 | Internal Server Error —— We had a problem with our server. Try again later.
+503 | Service Unavailable —— We're temporarily offline for maintenance. Please try again later.
+-->
 
       </div>
       <div class="dark-box">
