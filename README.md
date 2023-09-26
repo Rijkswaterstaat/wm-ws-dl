@@ -1,5 +1,8 @@
 # wm-ws-dl
 ### Web API waterdata
+**The maintenance of this page is discontinued.**
+**Please refer to www.rijkswaterstaatdata.nl/waterdata for documentation, examples, help and updates of our services.**
+
 Rijkswaterstaat (RWS) policy is to give access to as much data as possible, both technically and juridical.<br>
 Data from the water quantity netwerk (timeseries, physical parameters like water level) and water quality network (time series and samples, chemical and ecological parameters) are stored and can be accessed by a GUI [https://waterinfo.rws.nl].
 
